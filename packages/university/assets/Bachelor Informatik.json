@@ -1,0 +1,3050 @@
+[
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Mathematik 1 für Informatiker: Diskrete Strukturen",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Jun.-Prof. Dr. Schneider"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Mathematik 1 für Informatiker: Lineare Algebra",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Baumann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Mathematik 3 für Informatiker",
+            "extent":{
+               "lecture":3,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Baumann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Algorithmen und Datenstrukturen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Einführungspraktikum: RoboLab",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Fetzer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Formale Systeme",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Krötzsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Softwaretechnologie-Projekt",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Aßmann",
+               "Dr. Demuth"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Rechnerarchitektur I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Kumar"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Betriebssysteme und Sicherheit",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Köpsell ",
+               "Dr.-Ing. Roitzsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Technische Grundlagen der Informatik",
+            "extent":{
+               "lecture":3,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Systemorientierte Informatik und Hardware Software Codesign",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Intelligente Systeme",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Schroeder"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Einführung in die Medieninformatik",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Weber"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Advanced Query Processing in Database Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Lehner"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Communicating Autonomous Vehicles",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Sommer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Compiler Construction",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Compiler Construction Tutorial",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computer Vision I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Andres"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computer- und robotergestütze Chirurgie",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Speidel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computergraphik I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Cooperative Mobile Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Sommer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Data Visualization",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold",
+               "Prof. Dachselt"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Denken als Berechnung",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Hölldobler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Discrete Algorithms for Computational Biology",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Schroeder"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Distributed Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Braun ",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Effiziente parallele Algorithmen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Einführung in das Parsing natürlicher Sprachen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Engineering industrieller Kommunikationssysteme",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Forschungskolleg Mediengestaltung Theorie",
+            "extent":{
+               "lecture":1,
+               "exercise":2,
+               "practical":1
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Foundations of Complexity Theory",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Carral"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Foundations of Virtual Reality",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Frontiers in Immersive Media",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":2
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Fuzzy Description Logic",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr.-Ing. Borgwardt"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hardware Modellierung und Simulation",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Göhringer"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hauptseminar Adaptive Rechnersysteme",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Göhringer"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hauptseminar Current Topics in Compiler Construction",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hauptseminar Städte in der Computergraphik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hochleistungsrechner und ihre Programmierung",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hochparallele Programmierung von GPUs",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Information Retrieval",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Internet of Things in der Automation",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Dr.-Ing. Hilbert"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Introduction to Automatic Structures",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Turhan"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Knowledge Graphs",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Krötzsch"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Applied Immersive Media",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Audio Processing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Computer- und robotergestützte Chirurgie",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Speidel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Computergraphik und Visualisierung",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Cyber Physical Systems",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum DB-Systemarchitektur",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Habich"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Interaktive Multimediale Technologien",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Dachselt"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Kryptographie und Datensicherheit",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Köpsell"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mediengestaltung",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr.-Ing. Franke"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mensch-Computer Interaktion",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr.-Ing. Loitsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Methoden der Datenanalyse",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mobile and Ubiquitous Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum OUTPUT.DD Live",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Paralleles Rechnen",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr.-Ing. Schöne"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Prozesskommunikation",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Rechnernetze",
+            "extent":{
+               "lecture":0,
+               "exercise":4
+            },
+            "teachers":[
+               "Dr. Feldmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Service and Cloud Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Braun"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Wissensbasierte Systeme",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Krötzsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Konzepte der parallelen Programmierung",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr.-Ing. Schöne"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Leistungsanalyse von Rechnersystemen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr. Brunst"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Machine Learning I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Andres"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Mensch-Computer Interaktion",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Weber"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Netzwerkmanagement in industriellen Anwendungen",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Praktikum Verarbeitung natürlicher Sprachen",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Prediction and Estimation Techniques",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Dargie"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Programming for Data Science",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Ausgewählte Themen der Theoretischen Informatik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Baader"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Datenbanken",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Lehner"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Service and Cloud Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Braun"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Theoretische Informatik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Klüppelholz"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Rechnernetzpraxis",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Feldmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Requirements Engineering und Testen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Demuth"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Security and Cryptography I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Köpsell"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Seminar Current Topics in Embedded Systems",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Kumar"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Seminar Natural Language Processing I",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Service and Cloud Computing",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Braun ",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Softwaretechnologie II",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Götz"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Systems Engineering I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Fetzer"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Theorie der Gewichteten Baumautomaten",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"User Interface Engineering",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dachselt",
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"User Interface Engineering - Übung zur Vorlesung",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dachselt",
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Web- und Multimedia Engineering",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dachselt",
+               "Dr. Mitschick"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         
+      ],
+      "courses":[
+         
+      ],
+      "possibleCourses":[
+         {
+            "favorite":false,
+            "name":"Advanced Query Processing in Database Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Lehner"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Automata and Logic",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Baader"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Communicating Autonomous Vehicles",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Sommer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Compiler Construction",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Compiler Construction Tutorial",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Castrillon-Mazo"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computer Vision I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Andres"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computer- und robotergestütze Chirurgie",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Speidel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Computergraphik I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Cooperative Mobile Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Sommer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Data Visualization",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold",
+               "Prof. Dachselt"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Denken als Berechnung",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Hölldobler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Design Patterns and Frameworks",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Götz"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Distributed Systems",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Braun ",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Effiziente parallele Algorithmen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Einführung in das Parsing natürlicher Sprachen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Engineering industrieller Kommunikationssysteme",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Forschungskolleg Mediengestaltung Theorie",
+            "extent":{
+               "lecture":1,
+               "exercise":2,
+               "practical":1
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Forschungspraktikum Multimedia-Technologie",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":2
+            },
+            "teachers":[
+               "Dr. Mitschick"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Forschungsseminar Multimedia-Technologie",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Mitschick"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Foundations of Complexity Theory",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Carral"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Foundations of Virtual Reality",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Frontiers in Immersive Media",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":2
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Fuzzy Description Logic",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr.-Ing. Borgwardt"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hardware Modellierung und Simulation",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Göhringer"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hauptseminar Adaptive Rechnersysteme",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Göhringer"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hauptseminar Städte in der Computergraphik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hochleistungsrechner und ihre Programmierung",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Hochparallele Programmierung von GPUs",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Information Retrieval",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Internet of Things in der Automation",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Dr.-Ing. Hilbert"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Introduction to Automatic Structures",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Turhan"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Knowledge Graphs",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Krötzsch"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Applied Immersive Media",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Jun.-Prof. McGinity"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Audio Processing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Computer- und robotergestützte Chirurgie",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Speidel"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Andere Fakultäten",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Computergraphik und Visualisierung",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Gumhold"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Cyber Physical Systems",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum DB-Systemarchitektur",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Habich"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Interaktive Multimediale Technologien",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Dachselt"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Kryptographie und Datensicherheit",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Köpsell"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mediengestaltung",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr.-Ing. Franke"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mensch-Computer Interaktion",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr.-Ing. Loitsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Methoden der Datenanalyse",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Mobile and Ubiquitous Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum OUTPUT.DD Live",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Groh"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Paralleles Rechnen",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr.-Ing. Schöne"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Prozesskommunikation",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Wollschlaeger"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Rechnernetze",
+            "extent":{
+               "lecture":0,
+               "exercise":4
+            },
+            "teachers":[
+               "Dr. Feldmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Service and Cloud Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Schill",
+               "Dr. Braun"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Komplexpraktikum Wissensbasierte Systeme",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Krötzsch"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Konzepte der parallelen Programmierung",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr.-Ing. Schöne"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Leistungsanalyse von Rechnersystemen",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Nagel",
+               "Dr. Brunst"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Technische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Machine Learning I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dr. Andres"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Künstliche Intelligenz",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Mensch-Computer Interaktion",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Weber"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Netzwerkmanagement in industriellen Anwendungen",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Angewandte Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Praktikum Verarbeitung natürlicher Sprachen",
+            "extent":{
+               "lecture":0,
+               "exercise":0,
+               "practical":4
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Prediction and Estimation Techniques",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Dargie"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Programming for Data Science",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Thiele"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Ausgewählte Themen der Theoretischen Informatik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Baader"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Datenbanken",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Lehner"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Service and Cloud Computing",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Braun"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Proseminar Theoretische Informatik",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Klüppelholz"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Rechnernetzpraxis",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Feldmann"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Security and Cryptography I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Köpsell"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Seminar Natural Language Processing I",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Service and Cloud Computing",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Braun ",
+               "Dr. Springer"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Softwaretechnologie II",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Dr. Götz"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Systems Engineering I",
+            "extent":{
+               "lecture":2,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Fetzer"
+            ],
+            "languages":[
+               "englisch"
+            ],
+            "institute":"Systemarchitektur",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"Theorie der Gewichteten Baumautomaten",
+            "extent":{
+               "lecture":4,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Vogler"
+            ],
+            "languages":[
+               "deutsch"
+            ],
+            "institute":"Theoretische Informatik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"User Interface Engineering",
+            "extent":{
+               "lecture":2,
+               "exercise":0,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dachselt",
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         },
+         {
+            "favorite":false,
+            "name":"User Interface Engineering - Übung zur Vorlesung",
+            "extent":{
+               "lecture":0,
+               "exercise":2,
+               "practical":0
+            },
+            "teachers":[
+               "Prof. Dachselt",
+               "Dr. Lehmann"
+            ],
+            "languages":[
+               "deutsch/englisch"
+            ],
+            "institute":"Software- und Multimediatechnik",
+            "master":false
+         }
+      ]
+   },
+   {
+      "parent":null,
+      "children":[
+         {
+            "parent":null,
+            "children":[
+               
+            ],
+            "name":"Tabelle 2",
+            "possibleCourses":[
+               {
+                  "favorite":false,
+                  "name":"Proseminar Audio",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Groh"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Software- und Multimediatechnik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proseminar Ausgewählte Themen der Theoretischen Informatik",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Baader"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Theoretische Informatik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proseminar Datenbanken",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Lehner"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Systemarchitektur",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proseminar Rechnerarchitektur",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Nagel"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Technische Informatik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proseminar Service and Cloud Computing",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Dr. Braun"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Systemarchitektur",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proseminar Theoretische Informatik",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Dr. Klüppelholz"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Theoretische Informatik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Seminar Barrierefreie Literaturerstellung",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Weber"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Angewandte Informatik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Seminar Natural Language Processing I",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Vogler"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Theoretische Informatik",
+                  "master":false
+               }
+            ],
+            "courses":[
+               
+            ]
+         },
+         {
+            "parent":null,
+            "children":[
+               
+            ],
+            "name":"Tabelle 1",
+            "possibleCourses":[
+               {
+                  "favorite":false,
+                  "name":"Komplexpraktikum OUTPUT.DD Live",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":0,
+                     "practical":4
+                  },
+                  "teachers":[
+                     "Prof. Groh"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Software- und Multimediatechnik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Proeminar Immersive Media",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Jun.-Prof. McGinity"
+                  ],
+                  "languages":[
+                     "englisch"
+                  ],
+                  "institute":"Software- und Multimediatechnik",
+                  "master":false
+               },
+               {
+                  "favorite":false,
+                  "name":"Seminar OUTPUT Werkstatt",
+                  "extent":{
+                     "lecture":0,
+                     "exercise":2,
+                     "practical":0
+                  },
+                  "teachers":[
+                     "Prof. Groh"
+                  ],
+                  "languages":[
+                     "deutsch"
+                  ],
+                  "institute":"Software- und Multimediatechnik",
+                  "master":false
+               }
+            ],
+            "courses":[
+               
+            ]
+         }
+      ],
+      "courses":[
+         
+      ]
+   }
+]
