@@ -1,6 +1,7 @@
 import {Course} from "./Course.entity";
 import {Module} from "./Module.entity";
-import {Entity, PrimaryColumn} from "typeorm";
+import {Entity, OneToMany, PrimaryColumn} from "typeorm";
+import {Period} from "./Period.entitiy";
 
 @Entity()
 export class University {
@@ -9,6 +10,9 @@ export class University {
 
     courses: Course[]
     modules: Module[]
+
+    @OneToMany(type => Period, period => period.university)
+    periods: Period
 
     // constructor(courses: Course[]) {
         // this.courses = courses

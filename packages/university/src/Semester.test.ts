@@ -1,7 +1,7 @@
-import {Season, Semester} from "./Semester.entity";
+import {Season, Period} from "./Period.entitiy";
 
-const summerTerm2020 = new Semester({
-    season: Season.SUMMER,
-    year: '2020'
-})
+// const summerTerm2020 = new Period({
+//     season: Season.SUMMER,
+//     year: '2020'
+// })
 

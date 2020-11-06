@@ -9,7 +9,7 @@
     "backend": {
       "type": "application",
       "root": "./",
-      "entryFile": "main",
+      "entryFile": "backend/src/main.js",
       "sourceRoot": "./src",
       "compilerOptions": {
         "tsConfigPath": "./tsconfig.json"

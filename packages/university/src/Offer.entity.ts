@@ -1,6 +1,6 @@
 import {BaseEntity, Entity, Index, JoinColumn, ManyToOne, PrimaryColumn} from "typeorm";
 import {Course} from "./Course.entity";
-import {Semester} from "./Semester.entity";
+import {Period} from "./Period.entitiy";
 
 @Entity()
 export class Offer extends BaseEntity {
@@ -9,8 +9,8 @@ export class Offer extends BaseEntity {
     @PrimaryColumn({ type: 'varchar', length: 255 })
     course: Course
 
-    @ManyToOne(type => Semester, semester => semester.offers, { nullable: false })
-    @JoinColumn({ referencedColumnName: 'id'})
+    @ManyToOne(type => Period, semester => semester.offers, { nullable: false })
+    @JoinColumn()
     @PrimaryColumn({ type: 'integer'})
-    semester: Semester
+    semester: Period
 }

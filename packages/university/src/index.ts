@@ -7,6 +7,6 @@ export * from "./Degree.entity";
 export * from "./Module.entity";
 export * from "./Faculty.entity";
 export * from "./Student.entity";
-export * from "./Semester.entity";
+export * from "./Period.entitiy";
 export * from "./Department.entity";
 // export * from "./Enrollment.entity";
