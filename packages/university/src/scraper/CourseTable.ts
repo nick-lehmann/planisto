@@ -1,4 +1,4 @@
-import { Course } from '../Course'
+import { Course } from '../Course.entity'
 import { Extent } from '../Extent'
 
 export class CourseTable {

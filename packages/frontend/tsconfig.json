@@ -3,5 +3,9 @@
 
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*", "**/*.test.ts"],
-  
+  "compilerOptions": {
+    "paths": {
+      "typeorm": ["./node_modules/typeorm/typeorm-model-shim.js"]
+    }
+  }
 }

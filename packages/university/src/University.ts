@@ -1,13 +1,19 @@
-import { Course, Module } from '.'
+import {Course} from "./Course.entity";
+import {Module} from "./Module.entity";
+import {Entity, PrimaryColumn} from "typeorm";
 
+@Entity()
 export class University {
+    @PrimaryColumn({ type: 'varchar', length: 255})
+    name: string
+
     courses: Course[]
     modules: Module[]
 
-    constructor(courses: Course[]) {
-        this.courses = courses
-        this.modules = uniqueModules(courses)
-    }
+    // constructor(courses: Course[]) {
+        // this.courses = courses
+        // this.modules = uniqueModules(courses)
+    // }
 
     /**
      * Moves a course to a new module if the move is valid.

@@ -2,8 +2,6 @@
     import { Module, Extent, Course } from '@planisto/university'
     import Autocomplete from '../../../components/forms/AutoComplete.svelte'
 
-    export let moduleID
-
     const modules = [new Module({
         name: 'Künstliche Intelligenz',
         code: 'INF-BAS2',

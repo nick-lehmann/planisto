@@ -1,4 +1,28 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": ["@nestjs/swagger/plugin"]
+  },
+  "monorepo": true,
+  "projects": {
+    "backend": {
+      "type": "application",
+      "root": "./",
+      "entryFile": "main",
+      "sourceRoot": "./src",
+      "compilerOptions": {
+        "tsConfigPath": "./tsconfig.json"
+      }
+    },
+    "university": {
+      "type": "library",
+      "root": "../university",
+      "entryFile": "index",
+      "sourceRoot": "../university/src",
+      "compilerOptions": {
+        "tsConfigPath": "../university/tsconfig.json"
+      }
+    }
+  }
 }

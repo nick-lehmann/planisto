@@ -1,4 +1,5 @@
-import type {Module} from "./Module";
+import {Column, Entity, Generated, Index, OneToMany, PrimaryColumn} from "typeorm";
+import {Offer} from "./Offer.entity";
 
 export enum Season {
     WINTER,
@@ -19,18 +20,27 @@ export function parseSemesterString(raw: string) {
     if (rawSeason.toLowerCase().includes('winter'))
         season = Season.WINTER
     
-    return new Semester({
-        year: Number.parseInt(year),
-        season
-    })
+    return new Semester({year, season})
 }
 
+@Entity()
 export class Semester {
-    year: number
+    @Index({ unique: true})
+    @Generated('increment')
+    @Column({ type: 'integer', nullable: false})
+    id?: number
+
+    @PrimaryColumn({type: "varchar", length: 5, nullable: false})
+    year: string
+
+    @PrimaryColumn({ type: "enum", enum: Season, nullable: false})
     season: Season
-    start?: Date
-    end?: Date
-    modules?: Module[]
+
+    @Column({ type: 'date' }) start?: Date
+    @Column({ type: 'date' }) end?: Date
+
+    @OneToMany(type => Offer, offer => offer.semester)
+    offers?: Offer[]
 
     constructor(init: Semester) { Object.assign(this, init) }
 
@@ -47,11 +57,12 @@ export class Semester {
      * of preparation or self study.
      */
     getWeeklyUniversityTime?(): number {
-        let total = 0
-        for (const module of this.modules)
-            for (const course of module.courses)
-                total += course.extent.total()
-        return total
+        return 0
+        // let total = 0
+        // for (const module of this.modules)
+        //     for (const course of module.courses)
+        //         total += course.extent.total()
+        // return total
     }
 }
 

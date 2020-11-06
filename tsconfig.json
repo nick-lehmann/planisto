@@ -1,11 +1,21 @@
 {
     "extends": "@tsconfig/svelte/tsconfig.json",
   
+    "compilerOptions": {
+      "experimentalDecorators": true
+    },
+
     "include": ["src/**/*"],
     "exclude": ["node_modules/*", "__sapper__/*", "public/*", "**/*.test.ts"],
     "paths": {
+      "@planisto/backend": [
+        "packages/backend/src"
+      ],
       "@planisto/university": [
         "packages/university/src"
+      ],
+      "@planisto/frontend": [
+        "packages/frontend/src"
       ]
     }
   }

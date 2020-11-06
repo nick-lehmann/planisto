@@ -1,4 +1,6 @@
-import type {Module} from "."
+import {Column, Entity, ManyToMany, ManyToOne, PrimaryColumn} from "typeorm";
+import { Module } from './Module.entity'
+// import {Enrollment} from "./Enrollment.entity";
 
 /**
  * A programme offered by a university where the student is issued
@@ -8,11 +10,22 @@ import type {Module} from "."
  * - Bachelor Informatik
  * - Master Informatik
  */
+@Entity()
 export class Degree {
+    @PrimaryColumn({ type: 'varchar', length: 100, nullable: false })
     name: string
+
+    // TODO: Add transformer
+    @Column({ type: 'varchar', length: 8, nullable: false })
     totalCredits: ECTSCredits
+
+    @ManyToMany(type => Module, module => module.degrees)
     modules: Module[]
-    requires?: Degree
+
+    @ManyToOne(type => Degree, {nullable: true})
+    requires?: Degree | null
+
+    // enrollments: Enrollment[]
 
     constructor(init: Partial<Degree>) {
         Object.assign(this, init)

@@ -2,7 +2,8 @@
   "name": "@planisto/university",
   "version": "0.0.1",
   "description": "Code representing the internals of a university",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "files": ["src"],
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/scraper/Scraper.ts",
     "build": "tsc --outdir dist"
@@ -23,6 +24,7 @@
     "@types/jsdom": "^16.2.4",
     "axios": "^0.20.0",
     "axios-cache-adapter": "^2.5.0",
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.3",
+    "typeorm": "^0.2.28"
   }
 }

@@ -1,4 +1,5 @@
-import {Course, totalExtentOfCourses, Extent} from ".";
+import {Course, totalExtentOfCourses } from "./Course.entity";
+import {Extent} from "./Extent";
 
 test('Calculate total extent', () => {
     const course1 = new Course({

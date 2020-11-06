@@ -1,6 +1,8 @@
-import { Course, totalExtentOfCourses } from "."
 import { Extent } from "./Extent"
-import type { ECTSCredits } from "./Degree"
+import type { ECTSCredits } from "./Degree.entity"
+import {Entity, Column, PrimaryColumn, ManyToOne, ManyToMany} from 'typeorm'
+import {Degree} from "./Degree.entity";
+import {Course, totalExtentOfCourses} from "./Course.entity";
 
 // Examples: INF-B-610
 export type ModuleCode = string
@@ -15,16 +17,28 @@ export type UniversityItemMeta = {
  * (typical in the earlier semesters) or has multiple courses to choose
  * from. For the latter, certain requirements have to be met.
  */
+@Entity()
 export class Module {
+    @PrimaryColumn({ type: 'varchar', length: 255 })
     name: string
+
+    @Column({ type: 'varchar', length: 100})
     code: string
+
+    @Column({ type: 'varchar', length: 10 })
     extent: Extent
+
+    @Column({ type: 'boolean' })
     mandatory: boolean
+
     courses: Course[]
     possibleCourses: Course[]
     // credits: ECTSCredits
     credits: any
     preferredStudySemester?: number
+
+    @ManyToMany(type => Degree, degree => degree.modules)
+    degrees: Degree[]
     
     /** 
      * Modules can be nested. The parent is only completed if all children were completed.
