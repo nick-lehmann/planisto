@@ -1,8 +1,9 @@
-import { Extent } from "./Extent"
+import {Extent, extentTransformer} from "./Extent"
 import type { ECTSCredits } from "./Degree.entity"
-import {Entity, Column, PrimaryColumn, ManyToOne, ManyToMany} from 'typeorm'
+import {Entity, Column, PrimaryColumn, ManyToOne, ManyToMany, OneToMany} from 'typeorm'
 import {Degree} from "./Degree.entity";
 import {Course, totalExtentOfCourses} from "./Course.entity";
+import {Offer} from "./Offer.entity";
 
 // Examples: INF-B-610
 export type ModuleCode = string
@@ -25,7 +26,7 @@ export class Module {
     @Column({ type: 'varchar', length: 100})
     code: string
 
-    @Column({ type: 'varchar', length: 10 })
+    @Column({ type: 'varchar', length: 10, transformer: extentTransformer })
     extent: Extent
 
     @Column({ type: 'boolean' })
@@ -39,7 +40,10 @@ export class Module {
 
     @ManyToMany(type => Degree, degree => degree.modules)
     degrees: Degree[]
-    
+
+    @OneToMany(type => Offer, offer => offer.modulee)
+    offers: Offer[]
+
     /** 
      * Modules can be nested. The parent is only completed if all children were completed.
      * Example: INF-B-610 AQUA Contains of two parts which are completly seperate 

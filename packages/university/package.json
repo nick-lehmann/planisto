@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "description": "Code representing the internals of a university",
   "main": "dist/index.js",
-  "files": ["src"],
+  "private": "true",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/scraper/Scraper.ts",
+    "scrape": "nodemon --watch 'src/**/*.ts' --exec ts-node src/scraper/Scraper.ts",
     "build": "tsc --outdir dist"
   },
   "author": "Nick Lehmann <nick@lehmann.sh>",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/cheerio": "^0.22.21",

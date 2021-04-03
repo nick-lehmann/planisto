@@ -49,10 +49,10 @@ export class Period {
     @Column({ type: 'date' }) start: Date
     @Column({ type: 'date' }) end: Date
 
-    @OneToMany(type => Offer, offer => offer.semester)
+    @OneToMany(type => Offer, offer => offer.period)
     offers?: Offer[]
 
-    constructor(init: Period) { Object.assign(this, init) }
+    constructor(init: Partial<Period>) { Object.assign(this, init) }
 
     /**
      * Returns the weekly working time the university expects you to invest.

@@ -14,6 +14,8 @@ export class University {
     @OneToMany(type => Period, period => period.university)
     periods: Period
 
+    constructor(init: Partial<University>) { Object.assign(this, init) }
+
     // constructor(courses: Course[]) {
         // this.courses = courses
         // this.modules = uniqueModules(courses)

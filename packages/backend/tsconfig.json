@@ -1,24 +1,16 @@
 {
   "compilerOptions": {
+    "target": "es2017",
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
-    "paths": {
-      "@planisto/university": [
-        "../university/src"
-      ],
-      "@planisto/university/*": [
-        "../university/src/*"
-      ]
-    }
+    "incremental": true
   },
   "include": ["src/*", "migration/*", "../university/src/index.ts"],
   "exclude": ["node_modules", "dist"]

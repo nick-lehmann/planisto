@@ -1,7 +1,12 @@
 import type { Module } from './Module.entity'
-import { Extent } from './Extent'
-import {Entity, Column, PrimaryColumn, OneToMany} from 'typeorm'
+import {Extent, extentTransformer} from './Extent'
+import {Entity, Column, PrimaryColumn, OneToMany, ValueTransformer} from 'typeorm'
 import {Offer} from "./Offer.entity";
+
+export const stringListTransformer: ValueTransformer = {
+    to(value: string[]) { return value.join('/')},
+    from(raw: string) { return raw.split('/')}
+}
 
 /**
  * A course is a regular event a student has to attend or can choose to attend.
@@ -19,10 +24,10 @@ export class Course {
     @PrimaryColumn({ type: 'varchar', length: 255 })
     name: string
 
-    @Column({ type: 'varchar', length: 10 })
+    @Column({ type: 'varchar', length: 10, transformer: extentTransformer })
     extent: Extent
 
-    @Column({ type: 'varchar', length: 255 })
+    @Column({ type: 'varchar', length: 255, transformer: stringListTransformer })
     teachers: string[]
 
     @Column({ type: 'varchar', length: 255 })
@@ -31,6 +36,7 @@ export class Course {
     @Column({ type: 'varchar', length: 255 })
     exam: string
 
+    // TODO: Not needed anymore
     @Column({ type: 'boolean' })
     master: boolean
     possibleModules: Module[]

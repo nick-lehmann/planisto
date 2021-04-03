@@ -1,6 +1,5 @@
 import {Column, Entity, ManyToMany, ManyToOne, PrimaryColumn} from "typeorm";
 import { Module } from './Module.entity'
-// import {Enrollment} from "./Enrollment.entity";
 
 /**
  * A programme offered by a university where the student is issued

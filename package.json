@@ -1,13 +1,21 @@
 {
-  "name": "uni",
+  "name": "planisto",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "build": "lerna run build --stream",
+    "dev": "lerna run dev",
+    "clean": "yarn run clean:dist && yarn run clean:packages",
+    "clean:dist": "lerna exec -- rm -rf dist",
+    "clean:packages": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
+    "test": "echo 'Not yet implemented'"
+  },
   "devDependencies": {
-    "@tsconfig/svelte": "^1.0.10",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "rollup-plugin-node-builtins": "^2.1.2"
   },
   "private": true,
+  "license": "UNLICENSED",
   "workspaces": [
     "packages/*"
   ]
