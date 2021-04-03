@@ -1,5 +1,5 @@
-<script lang="ts">
-    const message = "hello, here are your courses"
+<script lang='ts'>
+	const message = 'hello, here are your courses';
 </script>
 
 <style>

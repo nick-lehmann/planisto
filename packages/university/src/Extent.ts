@@ -1,4 +1,4 @@
-import {ValueTransformer} from "typeorm/decorator/options/ValueTransformer";
+import type {ValueTransformer} from "typeorm/decorator/options/ValueTransformer";
 
 export class Extent {
     lecture: number = 0

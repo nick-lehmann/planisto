@@ -1,5 +1,5 @@
 import {Course} from "./Course.entity";
-import {Module} from "./Module.entity";
+import type {Module} from "./Module.entity";
 import {Entity, OneToMany, PrimaryColumn} from "typeorm";
 import {Period} from "./Period.entitiy";
 

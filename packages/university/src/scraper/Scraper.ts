@@ -148,3 +148,6 @@
 //     const scraper = new TUDresdenScraper()
 //     await scraper.go()
 // }())
+
+// For isolated modules
+export const value = 5;

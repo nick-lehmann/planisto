@@ -1,17 +1,20 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true
   },
-  "include": ["src/*", "migration/*", "../university/src/index.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src/*",
+    "migration/*",
+    "../university/src/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
