@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "module": "es2020",
-    "lib": ["es2020"],
+    "lib": ["es2020", "DOM"],
     "target": "es2019",
     "paths": {
       "$app/*": [
@@ -14,6 +14,12 @@
       ],
       "$lib/*": [
         "src/lib/*"
+      ],
+      "@planisto/university": [
+        "../university/src/index.ts"
+      ],
+      "typeorm": [
+        "/Users/nick/Code/Planisto/node_modules/typeorm/typeorm-model-shim.js"
       ]
     }
   },

@@ -2,7 +2,7 @@ import {BaseEntity, Column, Entity, OneToMany, PrimaryColumn} from "typeorm";
 // import {Enrollment} from "./Enrollment.entity";
 
 @Entity()
-export class Student extends BaseEntity {
+export class Student {
     @PrimaryColumn({ type: 'varchar', length: 255, nullable: false})
     email: string
 

@@ -4,7 +4,7 @@ export const courseFixtures = {
 	'CompilerBau': new Course({
 		name: 'Compilerbau',
 		extent: new Extent({ lecture: 2, exercise: 0, practical: 0 }),
-		teachers: ['Prof. Castrillon-Mazo '],
+		teachers: ['Prof. Castrillon-Mazo'],
 		institute: '',
 		exam: 'P(s)',
 		master: true

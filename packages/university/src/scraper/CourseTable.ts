@@ -30,10 +30,10 @@ export class CourseTable {
         const codeLinks = cell.querySelectorAll('a')
         console.log(`Found ${codeLinks.length} codes`)
 
-        for (const codeLink of codeLinks.values()) {
-            // @ts-ignore
-            console.log('Code: ', codeLink.text, ' -> ', codeLink.attributes["href"].textContent)
-        }
+        // for (const codeLink of codeLinks.values()) {
+        //     // @ts-ignore
+        //     console.log('Code: ', codeLink.text, ' -> ', codeLink.attributes["href"].textContent)
+        // }
     }
 
     parseExtentColumn(cell: HTMLElement): Extent {

@@ -8,13 +8,13 @@ export class University {
     @PrimaryColumn({ type: 'varchar', length: 255})
     name: string
 
-    courses: Course[]
-    modules: Module[]
+    courses?: Course[]
+    modules?: Module[]
 
     @OneToMany(type => Period, period => period.university)
-    periods: Period
+    periods?: Period
 
-    constructor(init: Partial<University>) { Object.assign(this, init) }
+    // constructor(init: Partial<University>) { Object.assign(this, init) }
 
     // constructor(courses: Course[]) {
         // this.courses = courses
@@ -45,6 +45,10 @@ export class University {
             if (module.courses.indexOf(course) >= 0)
                 return module
         return null
+    }
+
+    constructor(init: Partial<University>) {
+        Object.assign(this, init)
     }
 }
 

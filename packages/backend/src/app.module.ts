@@ -56,34 +56,39 @@ export class AppModule {
 	}
 
 	async onModuleInit() {
-		try {
-			await this.connection.getRepository(University).save(TUDresden);
-		} catch (e) {
-		}
-		try {
-			const result = await this.connection.getRepository(Period).save(Object.values(periodFixture));
-			console.log(result);
-		} catch (e) {
-			console.log(e);
-		}
-		try {
-			await this.connection.getRepository(Degree).save(degreesFixtures);
-		} catch (e) {
-		}
-		try {
-			await this.connection.getRepository(Module).save(Object.values(moduleFixtures));
-		} catch (e) {
-			console.log(e);
-		}
-		try {
-			await this.connection.getRepository(Course).save(Object.values(courseFixtures));
-		} catch (e) {
-			console.log(e);
-		}
-		try {
-			await this.connection.getRepository(Offer).save(offerFixtures);
-		} catch (e) {
-			console.log(e);
+		const fixtures = [{
+			entity: University,
+			items: TUDresden
+		}, {
+			entity: Period,
+			items: Object.values(periodFixture)
+		}, {
+			entity: Degree,
+			items: degreesFixtures
+		}, {
+			entity: Module,
+			items: Object.values(moduleFixtures)
+		}, {
+			entity: Course,
+			items: Object.values(courseFixtures)
+		}, {
+			entity: Offer,
+			items: offerFixtures
+		}]
+
+		for (const fixture of fixtures) {
+			const { entity, items } = fixture
+			try {
+				const repository = this.connection.getRepository(entity)
+				const existingEntries = await repository.count()
+
+				if (existingEntries == 0) {
+					// @ts-ignore
+					await this.connection.getRepository(entity).save(items)
+				}
+			} catch(e) {
+				console.log(`Failed inserting fixtures for entity ${entity.name}:`, e)
+			}
 		}
 	}
 }

@@ -1,3 +1,4 @@
+// @ts-ignore
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
 const pkg = require('./package.json');
@@ -19,6 +20,11 @@ module.exports = {
 		vite: {
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
+			},
+			resolve: {
+				alias: {
+					'@planisto/university': '/Users/nick/Code/Planisto/packages/university/src/index.ts'
+				}
 			}
 		}
 	}

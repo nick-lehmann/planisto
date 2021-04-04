@@ -1,9 +1,10 @@
 import type { Module } from './Module.entity'
 import {Extent, extentTransformer} from './Extent'
-import {Entity, Column, PrimaryColumn, OneToMany, ValueTransformer} from 'typeorm'
+import {Entity, Column, PrimaryColumn, OneToMany} from 'typeorm'
 import {Offer} from "./Offer.entity";
+import { Expose, Type } from "class-transformer"
 
-export const stringListTransformer: ValueTransformer = {
+export const stringListTransformer = {
     to(value: string[]) { return value.join('/')},
     from(raw: string) { return raw.split('/')}
 }
@@ -21,13 +22,16 @@ export const stringListTransformer: ValueTransformer = {
  */
 @Entity()
 export class Course {
+	  @Expose()
     @PrimaryColumn({ type: 'varchar', length: 255 })
     name: string
 
+	  @Type(() => Extent)
     @Column({ type: 'varchar', length: 10, transformer: extentTransformer })
     extent: Extent
 
-    @Column({ type: 'varchar', length: 255, transformer: stringListTransformer })
+    @Expose()
+    @Column({ type: 'varchar', length: 255, transformer: stringListTransformer})
     teachers: string[]
 
     @Column({ type: 'varchar', length: 255 })
@@ -38,7 +42,7 @@ export class Course {
 
     // TODO: Not needed anymore
     @Column({ type: 'boolean' })
-    master: boolean
+    master: boolean = false
     possibleModules: Module[]
     languages: string[]
 
@@ -50,6 +54,10 @@ export class Course {
     favorite: boolean = false
 
     constructor(init: Partial<Course>) { Object.assign(this, init)}
+
+    toString() {
+	      return "this is a course"
+    }
 }
 
 export function totalExtentOfCourses(courses: Course[]) {

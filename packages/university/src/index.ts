@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+// import 'reflect-metadata'
 export * from "./Extent";
 export * from "./University";
 export * from "./Offer.entity";
@@ -9,4 +9,4 @@ export * from "./Faculty.entity";
 export * from "./Student.entity";
 export * from "./Period.entitiy";
 export * from "./Department.entity";
-// export * from "./Enrollment.entity";
+export * from "./Enrollment.entity";
