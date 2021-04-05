@@ -1,17 +1,19 @@
 <script lang='ts'>
 	import { Entity } from 'typeorm';
-	import { LinkWrapper } from '../components';
+	import { LinkWrapper, Pagination } from '../components';
 
 	export let entity: Entity;
 	export let properties: string[];
 	export let store: Record<string, unknown>[];
 
 	export let currentPage = 0;
-	export let pageSize = 10;
+	export let pageSize = 5;
 	export let itemLink: (key: any) => string;
 	export let propertyFormatters: Record<string, (value: any) => string>;
 
 	let searchTerm = '';
+	let totalPages = 0;
+	$: totalPages = Math.ceil($store.length / pageSize);
 
 	let items = [];
 	$: items = $store
@@ -19,7 +21,7 @@
 			if (typeof value == 'string') return value.includes(searchTerm);
 			return false;
 		}))
-		.slice(currentPage * pageSize, (currentPage + 1) * pageSize - 1);
+		.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
 	$: console.log({ items });
 
 	function propertyDisplayString(item: unknown, propertyName: string): string {
@@ -62,6 +64,8 @@
 	{/each}
 </table>
 
+
+<Pagination bind:total={totalPages} bind:current={currentPage}/>
 
 <style>
     td {

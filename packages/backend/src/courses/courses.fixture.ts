@@ -1,5 +1,16 @@
 import { Course, Extent } from '@planisto/university';
 
+const dummyCourses = {};
+for (let i = 0; i < 20; i++) {
+	dummyCourses[`dummy${i}`] = new Course({
+		name: `Dummy ${i}`,
+		extent: new Extent({ lecture: 2, exercise: 4, practical: 8 }),
+		teachers: ['Max Mustermann'],
+		institute: '',
+		exam: 'do not care'
+	});
+}
+
 export const courseFixtures = {
 	'CompilerBau': new Course({
 		name: 'Compilerbau',
@@ -16,5 +27,6 @@ export const courseFixtures = {
 		institute: '',
 		exam: 'P(m)',
 		master: true
-	})
+	}),
+	...dummyCourses
 };
