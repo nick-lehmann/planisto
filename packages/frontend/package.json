@@ -10,7 +10,8 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@planisto/university": "*"
+		"@planisto/university": "*",
+		"url-join": "^4.0.1"
 	},
 	"devDependencies": {
 		"@planisto/university": "*",

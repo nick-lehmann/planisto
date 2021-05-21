@@ -1,12 +1,10 @@
 <script lang='ts'>
-	import { AdminList, courses } from '../../lib';
-	import { Course, Extent } from '@planisto/university';
+	import { AdminList, api } from '../../lib';
+	import { Course } from '@planisto/university';
 
-	const loading = courses.load()
+	const { courses } = api
 
-	let searchTerm = '';
-	let items;
-	$: items = searchTerm ? $courses.filter(course => course.name.includes(searchTerm)) : $courses;
+	const loading = api.courses.load()
 
 	// let propertyFormatters = {
 	// 	'extent': (value: Extent) => `${value.lecture}/${value.exercise}/${value.practical}`
@@ -21,9 +19,8 @@
 	<p>Loading...</p>
 {:then body}
 	<AdminList
-		entity={Course}
 		properties={['name', 'teachers', 'extent', 'institute']}
-		store={courses}
+		resource={api.courses}
 		{itemLink}
 	/>
 {:catch e}

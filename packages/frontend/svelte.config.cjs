@@ -23,7 +23,7 @@ module.exports = {
 			},
 			resolve: {
 				alias: {
-					'@planisto/university': '/Users/nick/Code/Planisto/packages/university/src/index.ts'
+					'@planisto/university': '/Users/nick/Projekte/Planisto/packages/university/src/index.ts'
 				}
 			}
 		}

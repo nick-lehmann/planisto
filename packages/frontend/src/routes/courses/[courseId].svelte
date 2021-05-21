@@ -5,12 +5,17 @@
 </script>
 
 <script>
-	import { courses, CourseForm  } from '../../lib';
+	import { api, CourseForm  } from '../../lib';
 	export let courseId = null
 
-	let course = $courses.find(course => course.name === courseId)
+	let courses = api.courses
+	let course = $courses[courseId]
+
+	function update() {
+		api.courses.updateEntity(courseId, course)
+	}
 </script>
 
 <h1>Kurs "{course.name}"</h1>
 <a href='/courses'>Back</a>
-<CourseForm bind:course/>
+<CourseForm bind:course on:save={update}/>

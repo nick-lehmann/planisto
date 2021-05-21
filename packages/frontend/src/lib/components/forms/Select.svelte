@@ -6,6 +6,8 @@
 	export let names: (any) => string = (option) => option.name as string
 	export let nullable = false
 	export let multiple = false
+
+	$: console.log(`Options for ${label}:`, options)
 </script>
 
 <p>

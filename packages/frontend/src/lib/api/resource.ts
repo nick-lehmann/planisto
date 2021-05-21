@@ -1,7 +1,12 @@
-import type { Entity } from 'typeorm'
-import { plainToClass } from 'class-transformer'
+import type { Entity } from 'typeorm';
+import { plainToClass } from 'class-transformer';
+import { ClassStore } from '../stores/example.store';
+import * as urljoin from 'url-join';
 
-export class ApiResource<T> {
+export type IdentifierFunction<T> = (T) => string;
+export type Identifier<T> = string | IdentifierFunction<T>;
+
+export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 	baseHttpOptions: Partial<RequestInit> = {
 		headers: {
 			'Content-Type': 'application/json'
@@ -10,42 +15,88 @@ export class ApiResource<T> {
 
 	apiUrl: URL;
 
-	constructor(private readonly endpoint: string, public readonly entity: Entity) {
+	constructor(private readonly endpoint: string, public readonly entity: Entity, public readonly identifier: Identifier<T>, initial = {}) {
+		super(initial ? initial : null);
 		this.apiUrl = new URL(endpoint, getApiUrl());
+		console.log('Resource has api url: ', this.apiUrl);
 	}
 
-	async request<X>(method: string, path: string, body: Record<string, unknown>): Promise<X> {
-		const url = new URL(path, this.apiUrl);
-		console.log('Requesting ', url)
-		const response = await fetch(url.toString(), { ...this.baseHttpOptions, method, body: method != 'GET' ? JSON.stringify(body) : undefined});
+	async request<X>(method: string, path: string = '', body: Record<string, unknown>): Promise<X> {
+		const url = urljoin(this.apiUrl.toString(), path);
+		console.log(`requesting ${url}`)
+		const response = await fetch(url, {
+			...this.baseHttpOptions,
+			method,
+			body: method != 'GET' ? JSON.stringify(body) : undefined
+		});
 		return await response.json() as Promise<X>;
+	}
+
+	private getIdentifier(item: T): string {
+		if (typeof this.identifier == 'string') return item[this.identifier];
+		else return this.identifier(item);
 	}
 
 	async getOne(id: string): Promise<T> {
 		const response = await this.request<T>('GET', id, {});
-		return plainToClass(this.entity, response)
+		const item = plainToClass(this.entity, response) as T;
+		this.update(items => {
+			const identifier = this.getIdentifier(item);
+			items[identifier] = item;
+			return items;
+		});
+		return item;
 	}
 
-	async getAll(): Promise<T[]> {
+	private async getAll(): Promise<T[]> {
 		const response = await this.request<T[]>('GET', '', {});
-		return response.map(item => plainToClass(this.entity, item)) as unknown as Promise<T[]>
+		return response.map(item => plainToClass(this.entity, item)) as unknown as T[];
+	}
+
+	async load(): Promise<void> {
+		const items = await this.getAll();
+		this.set(Object.fromEntries(items.map(item => [
+			this.getIdentifier(item),
+			item
+		])));
 	}
 
 	async createOne(entity: Partial<T>): Promise<T> {
-		const response = this.request<T>('POST', '/', entity);
-		return plainToClass(this.entity, response)
+		const response = await this.request<T>('POST', '', entity);
+		const newItem = plainToClass(this.entity, response) as T;
+		this.update(items => {
+			items[this.getIdentifier(newItem)] = newItem;
+			return items;
+		});
+		return newItem;
 	}
 
 	async updateEntity(id: string, entity: Partial<T>): Promise<T> {
-		return this.request<T>('PATCH', id, entity);
+		const response = await this.request<T>('PATCH', id, entity);
+		const newItem = plainToClass(this.entity, response) as T;
+		this.update(items => {
+			items[this.getIdentifier(newItem)] = newItem;
+			return items;
+		});
+		return newItem;
 	}
 
 	async replaceEntity(id: string, entity: Partial<T>): Promise<T> {
-		return this.request<T>('PUT', id, entity);
+		const response = await this.request<T>('PUT', id, entity);
+		const newItem = plainToClass(this.entity, response) as T;
+		this.update(items => {
+			items[this.getIdentifier(newItem)] = newItem;
+			return items;
+		});
+		return newItem;
 	}
 
 	async deleteEntity(id: string): Promise<void> {
-		return this.request('DELETE', id, {});
+		await this.request('DELETE', id, {});
+		this.update(items => {
+			if (id in items) delete items[id];
+			return items;
+		});
 	}
 }
 

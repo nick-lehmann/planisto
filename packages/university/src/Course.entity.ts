@@ -54,10 +54,6 @@ export class Course {
     favorite: boolean = false
 
     constructor(init: Partial<Course>) { Object.assign(this, init)}
-
-    toString() {
-	      return "this is a course"
-    }
 }
 
 export function totalExtentOfCourses(courses: Course[]) {

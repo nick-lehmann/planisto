@@ -32,7 +32,8 @@ export const ALL_ENTITIES = [Course, Degree, Department, Faculty, Module, Offer,
 			password: 'very_secret',
 			database: 'planisto',
 			synchronize: true,
-			entities: ALL_ENTITIES
+			entities: ALL_ENTITIES,
+			logging: 'all'
 		}),
 		CoursesModule,
 		ModulesModule,
@@ -74,20 +75,20 @@ export class AppModule {
 		}, {
 			entity: Offer,
 			items: offerFixtures
-		}]
+		}];
 
 		for (const fixture of fixtures) {
-			const { entity, items } = fixture
+			const { entity, items } = fixture;
 			try {
-				const repository = this.connection.getRepository(entity)
-				const existingEntries = await repository.count()
+				const repository = this.connection.getRepository(entity);
+				const existingEntries = await repository.count();
 
 				if (existingEntries == 0) {
 					// @ts-ignore
-					await this.connection.getRepository(entity).save(items)
+					await this.connection.getRepository(entity).save(items);
 				}
-			} catch(e) {
-				console.log(`Failed inserting fixtures for entity ${entity.name}:`, e)
+			} catch (e) {
+				console.log(`Failed inserting fixtures for entity ${entity.name}:`, e);
 			}
 		}
 	}

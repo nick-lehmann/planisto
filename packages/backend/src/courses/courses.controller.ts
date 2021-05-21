@@ -5,7 +5,14 @@ import { CoursesService } from './courses.service';
 import { ApiTags } from '@nestjs/swagger';
 
 @Crud({
-	model: { type: Course }
+	model: { type: Course },
+	params: {
+		'name': {
+			field: 'name',
+			type: 'string',
+			primary: true
+		}
+	}
 })
 @ApiTags('Courses')
 @Controller('courses')

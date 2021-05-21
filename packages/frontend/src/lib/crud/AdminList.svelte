@@ -1,74 +1,113 @@
 <script lang='ts'>
-	import { Entity } from 'typeorm';
 	import { LinkWrapper, Pagination } from '../components';
+	import { ApiResource } from '../api/resource';
+	import { getInitialSorting } from './sorting';
+	import type { Formatters, ItemLink } from './display';
+	import { display } from './display';
+	import type { Filters } from './filter';
+	import { FilterType, findUniqueValues } from './filter';
+	import { paginate } from './paginate';
+	import type { Items } from './utils';
+	import SortingIcon from './components/SortingIcon.svelte';
+	import FilterMenu from './components/FilterMenu.svelte';
+	import { process } from './process';
 
-	export let entity: Entity;
-	export let properties: string[];
-	export let store: Record<string, unknown>[];
+	export let properties: string[] = [];
+	export let resource: ApiResource<null>;
+
+	export let formatters: Formatters = null;
+	export let sorting = getInitialSorting(properties, resource);
+	export let filters: Filters = {
+		'name': { type: FilterType.Search },
+		'teachers': { type: FilterType.Select }
+	};
 
 	export let currentPage = 0;
-	export let pageSize = 5;
-	export let itemLink: (key: any) => string;
-	export let propertyFormatters: Record<string, (value: any) => string>;
+	export let pageSize = 10;
+	export let itemLink: ItemLink;
+	export let selectable = true;
 
-	let searchTerm = '';
-	let totalPages = 0;
-	$: totalPages = Math.ceil($store.length / pageSize);
+	let allItems: Items;
+	$: allItems = $resource;
 
-	let items = [];
-	$: items = $store
-		.filter(item => properties.map(prop => item[prop]).some(value => {
-			if (typeof value == 'string') return value.includes(searchTerm);
-			return false;
-		}))
-		.slice(currentPage * pageSize, (currentPage + 1) * pageSize);
-	$: console.log({ items });
+	let items: Items;
+	$: items = process({ items: allItems, sorting, filters });
+	$: displayedItems = paginate(items, pageSize, currentPage);
 
-	function propertyDisplayString(item: unknown, propertyName: string): string {
-		const value = item[propertyName];
-		switch (typeof value) {
-			case 'string':
-				return value;
-			case 'object':
-				return propertyFormatters && propertyName in propertyFormatters
-					? propertyFormatters[propertyName](value)
-					: value.toString();
-			default:
-				throw Error(`Cannot get display representation for property ${propertyName} for item: ${item}`);
-		}
-	}
+	let selected = {};
+	let selectCount: number;
+	$: selectCount = Object.values(selected).filter(x => x).length;
+
+	let totalItems: number, totalPages: number;
+	$: totalItems = Object.keys(allItems).length;
+	$: totalPages = Math.ceil(totalItems / pageSize);
+
+	let uniqueValues: Record<string, unknown[]>;
+	$: uniqueValues = findUniqueValues(allItems, filters);
+
+	// Debug
+	$: console.log('Current state of admin:', { sorting, filters, uniqueValues, totalItems, totalPages, selected });
 </script>
 
-<input type='text' bind:value={searchTerm} placeholder='Search'>
-
-<table>
-	<thead>
-	<tr>
-		{#each properties as property}
-			<td>{property}</td>
-		{/each}
-	</tr>
-	</thead>
-	<tbody>
-	</tbody>
-	{#each items as item}
-		<tr>
-			{#each properties as propertyName, index}
-				<td>
-					<LinkWrapper wrap={index === 0} link={encodeURI(itemLink(item))}>
-						<p>{propertyDisplayString(item, propertyName)}</p>
-					</LinkWrapper>
-				</td>
+<div class='admin-list'>
+	<main>
+		<table>
+			<thead>
+			<tr>
+				{#if selectable}
+					<td></td>
+				{/if}
+				{#each properties as property}
+					<td>
+						{property}
+						<SortingIcon bind:sortOrder={sorting[property]} />
+					</td>
+				{/each}
+			</tr>
+			</thead>
+			<tbody>
+			{#each Object.entries(displayedItems) as [identifier, item]}
+				<tr>
+					{#if selectable}
+						<td>
+							<input type='checkbox' bind:checked={selected[identifier]}>
+						</td>
+					{/if}
+					{#each properties as property, index}
+						<td>
+							<LinkWrapper wrap={index === 0} link={encodeURI(itemLink(item))}>
+								<p>{display(item, property, formatters)}</p>
+							</LinkWrapper>
+						</td>
+					{/each}
+				</tr>
 			{/each}
-		</tr>
-	{/each}
-</table>
+			</tbody>
+		</table>
+	</main>
+
+	<aside class='sidebar'>
+		<a href='/courses/new'>Add new</a>
+
+		<h3>Filters</h3>
+		<FilterMenu bind:filters bind:uniqueValues />
+		<p>Selected {selectCount} items</p>
+		<button on:click={() => selected = {}}>Reset Selection</button>
+	</aside>
+
+</div>
 
 
-<Pagination bind:total={totalPages} bind:current={currentPage}/>
+<p>Showing {Object.keys(items).length} items of {totalItems}</p>
+<Pagination bind:total={totalPages} bind:current={currentPage} />
 
 <style>
+		.admin-list {
+				display: grid;
+				grid-template-columns: 85% 15%;
+		}
     td {
-        padding: 10px
+        margin-bottom: 5px;
+        padding: 0 5px;
     }
 </style>

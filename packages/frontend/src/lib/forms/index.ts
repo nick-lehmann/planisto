@@ -1,0 +1,1 @@
+export { default as CourseForm } from './CoursForm.svelte'

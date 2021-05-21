@@ -10,7 +10,7 @@ export class Offer extends BaseEntity {
     id: number
 
     @ManyToOne(type => Course, course => course.offers, { nullable: false })
-    @JoinColumn({ referencedColumnName: 'name' })
+    @JoinColumn({ referencedColumnName: 'name' })
     course: Course
 
     @ManyToOne(type => Period, semester => semester.offers, { nullable: false })

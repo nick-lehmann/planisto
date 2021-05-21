@@ -5,7 +5,7 @@
 
 <style>
 	.content {
-			max-width: 800px;
+			max-width: 1200px;
 			display: block;
 			margin: 0 auto;
 	}
