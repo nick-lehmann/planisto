@@ -1,26 +1,37 @@
 import { Module as NestModule } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ModulesService } from './modules/modules.service';
-import { CoursesService } from './courses/courses.service';
-import { CoursesController } from './courses/courses.controller';
-import { ModulesController } from './modules/modules.controller';
-import { OfferService } from './offer/offer.service';
-import { Course, Degree, Department, Faculty, Module, Offer, Period, Student, University } from '@planisto/university';
-import { CoursesModule } from './courses/courses.module';
-import { ModulesModule } from './modules/modules.module';
-import { OfferModule } from './offer/offer.module';
-import { SemesterModule } from './semester/semester.module';
+import {
+	Course,
+	Degree,
+	Department,
+	Faculty,
+	Module,
+	Offer,
+	Period,
+	Student,
+	University
+} from '@planisto/university';
 import { Connection } from 'typeorm';
-import { periodFixture } from './period/period.fixture';
-import { TUDresden } from './university/university.fixture';
-import { DegreeModule } from './degree/degree.module';
-import { PeriodModule } from './period/period.module';
-import { degreesFixtures } from './degree/degree.fixture';
-import { moduleFixtures } from './modules/modules.fixture';
-import { courseFixtures } from './courses/courses.fixture';
-import { offerFixtures } from './offer/offer.fixtures';
+import { CoursesController, coursesFixtures, CoursesModule, CoursesService } from './courses';
+import { DegreeModule as DegreesModule, degreesFixtures } from './degrees';
+import { loadFixtures, TypeormFixture } from './helpers';
+import { moduleFixtures, ModulesController, ModulesModule, ModulesService } from './modules';
+import { offersFixtures, OffersModule, OffersService } from './offers';
+import { periodFixture, PeriodModule } from './period';
+import { SemesterModule } from './semester';
+import { universityFixture } from './university';
 
-export const ALL_ENTITIES = [Course, Degree, Department, Faculty, Module, Offer, Period, Student, University];
+export const ALL_ENTITIES = [
+	Course,
+	Degree,
+	Department,
+	Faculty,
+	Module,
+	Offer,
+	Period,
+	Student,
+	University
+];
 
 @NestModule({
 	imports: [
@@ -37,59 +48,45 @@ export const ALL_ENTITIES = [Course, Degree, Department, Faculty, Module, Offer,
 		}),
 		CoursesModule,
 		ModulesModule,
-		OfferModule,
+		OffersModule,
 		SemesterModule,
-		DegreeModule,
+		DegreesModule,
 		PeriodModule
 	],
-	controllers: [
-		CoursesController,
-		ModulesController
-	],
-	providers: [
-		ModulesService,
-		CoursesService,
-		OfferService
-	]
+	controllers: [CoursesController, ModulesController],
+	providers: [ModulesService, CoursesService, OffersService]
 })
 export class AppModule {
-	constructor(private connection: Connection) {
-	}
+	constructor(private connection: Connection) {}
 
 	async onModuleInit() {
-		const fixtures = [{
-			entity: University,
-			items: TUDresden
-		}, {
-			entity: Period,
-			items: Object.values(periodFixture)
-		}, {
-			entity: Degree,
-			items: degreesFixtures
-		}, {
-			entity: Module,
-			items: Object.values(moduleFixtures)
-		}, {
-			entity: Course,
-			items: Object.values(courseFixtures)
-		}, {
-			entity: Offer,
-			items: offerFixtures
-		}];
-
-		for (const fixture of fixtures) {
-			const { entity, items } = fixture;
-			try {
-				const repository = this.connection.getRepository(entity);
-				const existingEntries = await repository.count();
-
-				if (existingEntries == 0) {
-					// @ts-ignore
-					await this.connection.getRepository(entity).save(items);
-				}
-			} catch (e) {
-				console.log(`Failed inserting fixtures for entity ${entity.name}:`, e);
+		const fixtures: TypeormFixture<unknown>[] = [
+			{
+				entity: University,
+				fixture: universityFixture
+			},
+			{
+				entity: Period,
+				fixture: periodFixture
+			},
+			{
+				entity: Degree,
+				fixture: degreesFixtures
+			},
+			{
+				entity: Module,
+				fixture: moduleFixtures
+			},
+			{
+				entity: Course,
+				fixture: coursesFixtures
+			},
+			{
+				entity: Offer,
+				fixture: offersFixtures
 			}
-		}
+		];
+
+		await loadFixtures(fixtures, this.connection);
 	}
 }

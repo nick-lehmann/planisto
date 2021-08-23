@@ -1,7 +1,8 @@
 import { Extent, Module } from '@planisto/university';
+import type { ObjectFixture } from '../helpers';
 
-export const moduleFixtures = {
-	'vertiefung': new Module({
+export const moduleFixtures: ObjectFixture<Module> = {
+	vertiefung: new Module({
 		name: 'Vertiefung',
 		code: 'INF-B-510',
 		extent: new Extent({
@@ -11,7 +12,7 @@ export const moduleFixtures = {
 		}),
 		mandatory: true
 	}),
-	'spezialisierung': new Module({
+	spezialisierung: new Module({
 		name: 'Spezialisierung',
 		code: 'INF-B-520',
 		extent: new Extent({

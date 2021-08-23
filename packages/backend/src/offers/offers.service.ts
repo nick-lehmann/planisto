@@ -4,7 +4,7 @@ import { Offer } from '@planisto/university';
 import { Connection } from 'typeorm';
 
 @Injectable()
-export class OfferService extends TypeOrmCrudService<Offer> {
+export class OffersService extends TypeOrmCrudService<Offer> {
 	constructor(private connection: Connection) {
 		super(connection.getRepository<Offer>(Offer));
 	}

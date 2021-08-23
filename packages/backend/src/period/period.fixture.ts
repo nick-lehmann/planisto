@@ -1,8 +1,9 @@
 import { Period } from '@planisto/university';
+import type { ObjectFixture } from '../helpers';
 import { TUDresden } from '../university/university.fixture';
 
-export const periodFixture = {
-	'summer2020': new Period({
+export const periodFixture: ObjectFixture<Period> = {
+	summer2020: new Period({
 		name: 'Sommersemester 2020',
 		start: new Date(2020, 4, 1),
 		end: new Date(2020, 9, 30),

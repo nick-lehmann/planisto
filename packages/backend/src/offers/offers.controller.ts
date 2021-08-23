@@ -8,5 +8,4 @@ import { ApiTags } from '@nestjs/swagger';
 })
 @ApiTags('Offers')
 @Controller('offer')
-export class OfferController {
-}
+export class OffersController {}

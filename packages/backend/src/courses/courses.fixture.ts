@@ -1,4 +1,5 @@
 import { Course, Extent } from '@planisto/university';
+import type { ObjectFixture } from '../helpers';
 
 const dummyCourses = {};
 for (let i = 0; i < 20; i++) {
@@ -11,8 +12,8 @@ for (let i = 0; i < 20; i++) {
 	});
 }
 
-export const courseFixtures = {
-	'CompilerBau': new Course({
+export const coursesFixtures: ObjectFixture<Course> = {
+	CompilerBau: new Course({
 		name: 'Compilerbau',
 		extent: new Extent({ lecture: 2, exercise: 0, practical: 0 }),
 		teachers: ['Prof. Castrillon-Mazo'],
@@ -20,7 +21,7 @@ export const courseFixtures = {
 		exam: 'P(s)',
 		master: true
 	}),
-	'DIA': new Course({
+	DIA: new Course({
 		name: 'Datenintegration und -analyse ',
 		extent: new Extent({ lecture: 2, exercise: 2, practical: 0 }),
 		teachers: ['Prof. Lehner', 'Dr. Hartmann'],

@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Course } from './Course.entity';
 import { Period } from './Period.entity';
 import { Module } from './Module.entity';
@@ -19,7 +19,7 @@ export class Offer {
 
 	@ManyToOne((type) => Module, { nullable: false })
 	@JoinColumn()
-	modulee: Module;
+	module: Module;
 
 	constructor(init: Partial<Offer>) {
 		Object.assign(this, init);
