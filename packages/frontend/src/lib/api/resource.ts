@@ -1,9 +1,10 @@
-import type { Entity } from 'typeorm';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { plainToClass } from 'class-transformer';
-import { ClassStore } from '../stores/example.store';
+import { ClassStore } from '../stores/class.store';
 import * as urljoin from 'url-join';
 
-export type IdentifierFunction<T> = (T) => string;
+export type IdentifierFunction<T> = (entity: T) => string;
 export type Identifier<T> = string | IdentifierFunction<T>;
 
 export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
@@ -15,21 +16,26 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	apiUrl: URL;
 
-	constructor(private readonly endpoint: string, public readonly entity: Entity, public readonly identifier: Identifier<T>, initial = {}) {
+	constructor(
+		private readonly endpoint: string,
+		public readonly entity: T,
+		public readonly identifier: Identifier<T>,
+		initial = {}
+	) {
 		super(initial ? initial : null);
 		this.apiUrl = new URL(endpoint, getApiUrl());
-		console.log('Resource has api url: ', this.apiUrl);
+		console.debug('Resource has api url: ', this.apiUrl);
 	}
 
 	async request<X>(method: string, path: string = '', body: Record<string, unknown>): Promise<X> {
 		const url = urljoin(this.apiUrl.toString(), path);
-		console.log(`requesting ${url}`)
+		console.debug(`Requesting ${url}`);
 		const response = await fetch(url, {
 			...this.baseHttpOptions,
 			method,
 			body: method != 'GET' ? JSON.stringify(body) : undefined
 		});
-		return await response.json() as Promise<X>;
+		return (await response.json()) as Promise<X>;
 	}
 
 	private getIdentifier(item: T): string {
@@ -39,8 +45,8 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	async getOne(id: string): Promise<T> {
 		const response = await this.request<T>('GET', id, {});
-		const item = plainToClass(this.entity, response) as T;
-		this.update(items => {
+		const item = plainToClass(this.entity as any, response) as any as T;
+		this.update((items) => {
 			const identifier = this.getIdentifier(item);
 			items[identifier] = item;
 			return items;
@@ -50,21 +56,18 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	private async getAll(): Promise<T[]> {
 		const response = await this.request<T[]>('GET', '', {});
-		return response.map(item => plainToClass(this.entity, item)) as unknown as T[];
+		return response.map((item) => plainToClass(this.entity as any, item)) as unknown as T[];
 	}
 
 	async load(): Promise<void> {
 		const items = await this.getAll();
-		this.set(Object.fromEntries(items.map(item => [
-			this.getIdentifier(item),
-			item
-		])));
+		this.set(Object.fromEntries(items.map((item) => [this.getIdentifier(item), item])));
 	}
 
 	async createOne(entity: Partial<T>): Promise<T> {
 		const response = await this.request<T>('POST', '', entity);
-		const newItem = plainToClass(this.entity, response) as T;
-		this.update(items => {
+		const newItem = plainToClass(this.entity as any, response) as T;
+		this.update((items) => {
 			items[this.getIdentifier(newItem)] = newItem;
 			return items;
 		});
@@ -73,8 +76,8 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	async updateEntity(id: string, entity: Partial<T>): Promise<T> {
 		const response = await this.request<T>('PATCH', id, entity);
-		const newItem = plainToClass(this.entity, response) as T;
-		this.update(items => {
+		const newItem = plainToClass(this.entity as any, response) as T;
+		this.update((items) => {
 			items[this.getIdentifier(newItem)] = newItem;
 			return items;
 		});
@@ -83,8 +86,8 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	async replaceEntity(id: string, entity: Partial<T>): Promise<T> {
 		const response = await this.request<T>('PUT', id, entity);
-		const newItem = plainToClass(this.entity, response) as T;
-		this.update(items => {
+		const newItem = plainToClass(this.entity as any, response) as T;
+		this.update((items) => {
 			items[this.getIdentifier(newItem)] = newItem;
 			return items;
 		});
@@ -93,7 +96,7 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	async deleteEntity(id: string): Promise<void> {
 		await this.request('DELETE', id, {});
-		this.update(items => {
+		this.update((items) => {
 			if (id in items) delete items[id];
 			return items;
 		});
@@ -108,6 +111,5 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 // }
 
 function getApiUrl(): URL {
-	if (window.location.hostname.includes('localhost'))
-		return new URL('http://localhost:8000');
+	if (window.location.hostname.includes('localhost')) return new URL('http://localhost:8000');
 }

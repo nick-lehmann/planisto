@@ -1,1 +1,1 @@
-export { default as CourseForm } from './CoursForm.svelte'
+export { default as CourseForm } from './CourseForm.svelte'

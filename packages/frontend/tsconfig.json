@@ -1,32 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "module": "es2020",
-    "lib": ["es2020", "DOM"],
-    "target": "es2019",
-    "paths": {
-      "$app/*": [
-        ".svelte/dev/runtime/app/*",
-        ".svelte/build/runtime/app/*"
-      ],
-      "$service-worker": [
-        ".svelte/build/runtime/service-worker"
-      ],
-      "$lib/*": [
-        "src/lib/*"
-      ],
-      "@planisto/university": [
-        "../university/src/index.ts"
-      ],
-      "typeorm": [
-        "/Users/nick/Code/Planisto/node_modules/typeorm/typeorm-model-shim.js"
-      ]
-    }
-  },
-  "include": [
-    "src/**/*.d.ts",
-    "src/**/*.js",
-    "src/**/*.ts",
-    "src/**/*.svelte"
-  ]
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"module": "es2020",
+		"lib": ["es2020", "DOM"],
+		"target": "es2019",
+		"paths": {
+			"$app/*": [".svelte/dev/runtime/app/*", ".svelte/build/runtime/app/*"],
+			"$service-worker": [".svelte/build/runtime/service-worker"],
+			"$lib/*": ["src/lib/*"],
+			"@planisto/university": ["../university/src/index.ts"]
+		}
+	},
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }

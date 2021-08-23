@@ -3,3 +3,5 @@
 **/*.zip
 firestore
 **/yarn-error.log
+.DS_Store
+.svelte-kit

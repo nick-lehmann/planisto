@@ -1,3 +1,3 @@
 export * from './courses.store';
-export * from './faculties';
-export * from './languages';
+export * from './faculties.store';
+export * from './languages.store';

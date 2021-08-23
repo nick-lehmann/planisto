@@ -13,4 +13,4 @@ const config: ConnectionOptions = {
 	entities: ALL_ENTITIES
 };
 
-export = config
+export default config

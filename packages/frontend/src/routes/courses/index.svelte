@@ -1,10 +1,18 @@
-<script lang='ts'>
-	import { AdminList, api } from '../../lib';
-	import { Course } from '@planisto/university';
+<script context="module" lang="ts">
+	console.log('hello world');
+</script>
 
-	const { courses } = api
+<script lang="ts">
+	import { AdminList, courses } from '../../lib';
+	import type { Course } from '@planisto/university';
+	import { onMount } from 'svelte';
 
-	const loading = api.courses.load()
+	let loading = null;
+
+	onMount(() => {
+		console.log('Mounted');
+		loading = courses.load();
+	});
 
 	// let propertyFormatters = {
 	// 	'extent': (value: Extent) => `${value.lecture}/${value.exercise}/${value.practical}`
@@ -15,14 +23,16 @@
 
 <h1>Courses</h1>
 
-{#await loading}
-	<p>Loading...</p>
-{:then body}
-	<AdminList
-		properties={['name', 'teachers', 'extent', 'institute']}
-		resource={api.courses}
-		{itemLink}
-	/>
-{:catch e}
-	<p>Error {e}</p>
-{/await}
+{#if loading}
+	{#await loading}
+		<p>Loading...</p>
+	{:then body}
+		<AdminList
+			properties={['name', 'teachers', 'extent', 'institute']}
+			resource={courses}
+			{itemLink}
+		/>
+	{:catch e}
+		<p>Error {e}</p>
+	{/await}
+{/if}

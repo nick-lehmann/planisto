@@ -1,17 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "es2020",
+    "module": "es2020",
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "esModuleInterop": false
   },
   "include": [
     "src/*",
-    "migration/*",
-    "../university/src/index.ts"
+    "migration/*"
   ],
   "exclude": [
     "node_modules",
