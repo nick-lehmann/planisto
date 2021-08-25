@@ -12,14 +12,24 @@ import {
 	University
 } from '@planisto/university';
 import { Connection } from 'typeorm';
-import { CoursesController, coursesFixtures, CoursesModule, CoursesService } from './courses';
-import { DegreeModule as DegreesModule, degreesFixtures } from './degrees';
-import { loadFixtures, TypeormFixture } from './helpers';
-import { moduleFixtures, ModulesController, ModulesModule, ModulesService } from './modules';
-import { offersFixtures, OffersModule, OffersService } from './offers';
-import { periodFixture, PeriodModule } from './period';
-import { SemesterModule } from './semester';
-import { universityFixture } from './university';
+import {
+	CoursesController,
+	coursesFixtures,
+	CoursesModule,
+	CoursesService
+} from './courses/index.js';
+import { DegreeModule as DegreesModule, degreesFixtures } from './degrees/index.js';
+import { loadFixtures, TypeormFixture } from './helpers/index.js';
+import {
+	moduleFixtures,
+	ModulesController,
+	ModulesModule,
+	ModulesService
+} from './modules/index.js';
+import { offersFixtures, OffersModule, OffersService } from './offers/index.js';
+import { periodFixture, PeriodModule } from './period/index.js';
+import { SemesterModule } from './semester/index.js';
+import { universityFixture } from './university/index.js';
 
 export const ALL_ENTITIES = [
 	Course,
@@ -88,5 +98,7 @@ export class AppModule {
 		];
 
 		await loadFixtures(fixtures, this.connection);
+
+		console.debug(`IDs of offers: ${offersFixtures.map((offer) => offer.id)}`);
 	}
 }

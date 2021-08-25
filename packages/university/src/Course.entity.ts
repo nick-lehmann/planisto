@@ -1,8 +1,8 @@
-import type { Module } from './Module.entity';
-import { Extent, extentTransformer } from './Extent';
-import { Entity, Column, PrimaryColumn, OneToMany } from 'typeorm';
-import { Offer } from './Offer.entity';
 import { Expose, Type } from 'class-transformer';
+import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Extent, extentTransformer } from './Extent.js';
+import type { Module } from './Module.entity.js';
+import { Offer } from './Offer.entity.js';
 
 export const stringListTransformer = {
 	to(value: string[]) {

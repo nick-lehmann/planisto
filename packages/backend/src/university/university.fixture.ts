@@ -1,5 +1,5 @@
 import { University } from '@planisto/university';
-import type { ObjectFixture } from '../helpers';
+import type { ObjectFixture } from '../helpers/index.js';
 
 export const TUDresden = new University({
 	name: 'Technische Universität Dresden'

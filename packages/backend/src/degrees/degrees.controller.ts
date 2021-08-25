@@ -1,8 +1,8 @@
 import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Crud } from '@nestjsx/crud';
 import { Degree } from '@planisto/university';
-import { ApiTags } from '@nestjs/swagger';
-import { DegreesService } from './degrees.service';
+import { DegreesService } from './degrees.service.js';
 
 @Crud({
 	model: { type: Degree }

@@ -1,3 +1,3 @@
-export * from './semester.controller';
-export * from './semester.module';
-export * from './semester.service';
+export * from './semester.controller.js';
+export * from './semester.module.js';
+export * from './semester.service.js';

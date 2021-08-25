@@ -1,8 +1,8 @@
 import { Column, Entity, ManyToMany, OneToMany, PrimaryColumn } from 'typeorm';
-import { Course, totalExtentOfCourses } from './Course.entity';
-import { Degree } from './Degree.entity';
-import { Extent, extentTransformer } from './Extent';
-import { Offer } from './Offer.entity';
+import { Course, totalExtentOfCourses } from './Course.entity.js';
+import { Degree } from './Degree.entity.js';
+import { Extent, extentTransformer } from './Extent.js';
+import { Offer } from './Offer.entity.js';
 
 // Examples: INF-B-610
 export type ModuleCode = string;
@@ -40,7 +40,7 @@ export class Module {
 	@ManyToMany((type) => Degree, (degree) => degree.modules)
 	degrees: Degree[];
 
-	@OneToMany((type) => Offer, (offer) => offer.module)
+	@OneToMany((type) => Offer, (offer) => offer.modulee)
 	offers: Offer[];
 
 	/**

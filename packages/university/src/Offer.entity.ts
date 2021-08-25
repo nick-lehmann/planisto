@@ -1,7 +1,7 @@
 import { Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { Course } from './Course.entity';
-import { Period } from './Period.entity';
-import { Module } from './Module.entity';
+import type { Course } from './Course.entity.js';
+import { Module } from './Module.entity.js';
+import { Period } from './Period.entity.js';
 
 @Entity()
 @Index(['course', 'period', 'modulee'], { unique: true })
@@ -9,7 +9,7 @@ export class Offer {
 	@PrimaryGeneratedColumn()
 	id: number;
 
-	@ManyToOne((type) => Course, (course) => course.offers, { nullable: false })
+	@ManyToOne('Course', (course: Course) => course.offers, { nullable: false })
 	@JoinColumn({ referencedColumnName: 'name' })
 	course: Course;
 
@@ -19,7 +19,7 @@ export class Offer {
 
 	@ManyToOne((type) => Module, { nullable: false })
 	@JoinColumn()
-	module: Module;
+	modulee: Module;
 
 	constructor(init: Partial<Offer>) {
 		Object.assign(this, init);

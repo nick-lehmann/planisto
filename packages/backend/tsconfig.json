@@ -1,20 +1,14 @@
 {
-  "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "target": "es2020",
-    "module": "es2020",
-    "allowSyntheticDefaultImports": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "esModuleInterop": false
-  },
-  "include": [
-    "src/*",
-    "migration/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"target": "es2020",
+		"module": "esnext",
+		"allowSyntheticDefaultImports": true,
+		"outDir": "./dist",
+		"baseUrl": "./",
+		"incremental": true,
+		"esModuleInterop": false
+	},
+	"include": ["src/*", "migration/*"],
+	"exclude": ["node_modules", "dist"]
 }

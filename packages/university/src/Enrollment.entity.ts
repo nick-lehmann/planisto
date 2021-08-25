@@ -1,7 +1,3 @@
-import {BaseEntity, Entity, ManyToOne, PrimaryColumn} from "typeorm";
-import {Degree} from "./Degree.entity";
-import {Student} from "./Student.entity";
-
 // @Entity()
 // export class Enrollment extends BaseEntity {
 //     @ManyToOne(type => Degree, degree => degree.enrollments, { nullable: false})
@@ -11,3 +7,5 @@ import {Student} from "./Student.entity";
 //     @ManyToOne(type => Student)
 //     student: Student
 // }
+
+export const Enrollment = 5;

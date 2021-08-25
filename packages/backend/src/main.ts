@@ -1,7 +1,7 @@
-import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import 'reflect-metadata';
+import { AppModule } from './app.module.js';
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
@@ -16,7 +16,7 @@ async function bootstrap() {
 	app.enableCors({
 		origin: true,
 		credentials: true
-	})
+	});
 
 	await app.listen(8000);
 }

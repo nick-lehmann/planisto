@@ -18,13 +18,32 @@ export type TypeormFixture<T> = {
 	fixture: Fixture<T>;
 };
 
-export async function loadFixtures(fixtures: TypeormFixture<any>[], connection: Connection) {
-	for (const { entity, fixture } of fixtures) {
+export async function loadFixtures(
+	fixtures: TypeormFixture<any>[],
+	connection: Connection
+): Promise<Fixture<any>> {
+	for (let fixtureIndex = 0; fixtureIndex < fixtures.length; fixtureIndex++) {
+		const { entity, fixture } = fixtures[fixtureIndex];
 		try {
 			const repository = connection.getRepository(entity);
 			const existingEntries = await repository.count();
 
-			if (existingEntries == 0) await connection.getRepository(entity).save(fixture);
+			if (existingEntries > 0) return;
+
+			if (Array.isArray(fixture))
+				fixtures[fixtureIndex] = {
+					entity,
+					fixture: await repository.save(fixture)
+				};
+			else {
+				const fixtureEntries = Object.entries(fixture);
+				const savedEntries = await repository.save(fixtureEntries.map(([_, value]) => value));
+				const newFixture = Object.fromEntries(
+					fixtureEntries.map(([identifier, rawValue], index) => [identifier, savedEntries[index]])
+				);
+
+				fixtures[fixtureIndex] = { entity, fixture: newFixture };
+			}
 		} catch (e) {
 			// @ts-ignore
 			console.log(`Failed inserting fixtures for entity ${entity.name}:`, e);

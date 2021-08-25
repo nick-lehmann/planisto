@@ -1,15 +1,15 @@
-import { Entity, PrimaryColumn, ManyToOne, JoinColumn } from 'typeorm';
-import { Faculty } from './Faculty.entity';
+import { Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
+import { Faculty } from './Faculty.entity.js';
 
 @Entity()
 export class Department {
 	@PrimaryColumn({ type: 'varchar', length: 255 })
 	name: string;
 
-	@ManyToOne(type => Faculty, faculty => faculty.departments)
+	@ManyToOne((type) => Faculty, (faculty) => faculty.departments)
 	@JoinColumn()
 	@PrimaryColumn({ type: 'integer' })
-	faculty?: Faculty
+	faculty?: Faculty;
 
 	// courses: Course[]
 

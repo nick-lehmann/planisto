@@ -1,3 +1,15 @@
 {
-	"cSpell.words": ["Lehner", "Mazo", "Offers", "nestjsx", "planisto"]
+	"cSpell.words": ["Lehner", "Mazo", "Offers", "nestjsx", "planisto"],
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "Planisto",
+			"database": "planisto",
+			"username": "planisto",
+			"password": "very_secret"
+		}
+	]
 }

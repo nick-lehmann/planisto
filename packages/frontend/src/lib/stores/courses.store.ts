@@ -1,6 +1,5 @@
-import { writable } from 'svelte/store';
-import type { Course } from '@planisto/university';
-import type { ApiResource } from '../api/resource';
+import { Course } from '@planisto/university';
+import { ApiResource } from '../api/resource';
 // import { api } from '../api';
 
 // function createDictApiStore<T>(resource: ApiResource<T>, primaryKey: string) {
@@ -68,4 +67,4 @@ import type { ApiResource } from '../api/resource';
 // ])
 
 // export const courses = createDictApiStore<Course>(api.courses, "name")
-export const courses = null;
+export const courses = new ApiResource<Course>('http://localhost:8000/courses', Course, 'name');

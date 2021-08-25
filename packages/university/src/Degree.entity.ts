@@ -1,5 +1,5 @@
-import {Column, Entity, ManyToMany, ManyToOne, PrimaryColumn} from "typeorm";
-import { Module } from './Module.entity'
+import { Column, Entity, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
+import { Module } from './Module.entity.js';
 
 /**
  * A programme offered by a university where the student is issued
@@ -11,38 +11,38 @@ import { Module } from './Module.entity'
  */
 @Entity()
 export class Degree {
-    @PrimaryColumn({ type: 'varchar', length: 100, nullable: false })
-    name: string
+	@PrimaryColumn({ type: 'varchar', length: 100, nullable: false })
+	name: string;
 
-    // TODO: Add transformer
-    @Column({ type: 'varchar', length: 8, nullable: false })
-    totalCredits: ECTSCredits
+	// TODO: Add transformer
+	@Column({ type: 'varchar', length: 8, nullable: false })
+	totalCredits: ECTSCredits;
 
-    @ManyToMany(type => Module, module => module.degrees)
-    modules: Module[]
+	@ManyToMany((type) => Module, (module) => module.degrees)
+	modules: Module[];
 
-    @ManyToOne(type => Degree, {nullable: true})
-    requires?: Degree | null
+	@ManyToOne((type) => Degree, { nullable: true })
+	requires?: Degree | null;
 
-    // enrollments: Enrollment[]
+	// enrollments: Enrollment[]
 
-    constructor(init: Partial<Degree>) {
-        Object.assign(this, init)
-    }
+	constructor(init: Partial<Degree>) {
+		Object.assign(this, init);
+	}
 
-    get currentCredits(): ECTSCredits {
-        return this.modules
-            .filter(module => module.completed)
-            .reduce((total, module) => module.credits + total, 0)
-    }
+	get currentCredits(): ECTSCredits {
+		return this.modules
+			.filter((module) => module.completed)
+			.reduce((total, module) => module.credits + total, 0);
+	}
 
-    get progress(): number {
-        return this.currentCredits / this.totalCredits
-    }
+	get progress(): number {
+		return this.currentCredits / this.totalCredits;
+	}
 
-    get finished(): boolean {
-        return this.modules.every(module => module.completed)
-    }
+	get finished(): boolean {
+		return this.modules.every((module) => module.completed);
+	}
 }
 
-export type ECTSCredits = number
+export type ECTSCredits = number;

@@ -1,8 +1,8 @@
 import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Crud } from '@nestjsx/crud';
 import { Module } from '@planisto/university';
-import { ApiTags } from '@nestjs/swagger';
-import { ModulesService } from './modules.service';
+import { ModulesService } from './modules.service.js';
 
 @Crud({
 	model: { type: Module }
@@ -10,6 +10,5 @@ import { ModulesService } from './modules.service';
 @ApiTags('Modules')
 @Controller('modules')
 export class ModulesController {
-	constructor(private service: ModulesService) {
-	}
+	constructor(private service: ModulesService) {}
 }

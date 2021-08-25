@@ -1,5 +1,5 @@
 import { Course, Extent } from '@planisto/university';
-import type { ObjectFixture } from '../helpers';
+import type { ObjectFixture } from '../helpers/index.js';
 
 const dummyCourses = {};
 for (let i = 0; i < 20; i++) {

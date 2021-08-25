@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
 import { plainToClass } from 'class-transformer';
-import { ClassStore } from '../stores/class.store';
 import * as urljoin from 'url-join';
+import { ClassStore } from './class.store';
 
 export type IdentifierFunction<T> = (entity: T) => string;
 export type Identifier<T> = string | IdentifierFunction<T>;
@@ -18,12 +18,13 @@ export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 
 	constructor(
 		private readonly endpoint: string,
-		public readonly entity: T,
+		public readonly entity: unknown,
 		public readonly identifier: Identifier<T>,
 		initial = {}
 	) {
 		super(initial ? initial : null);
-		this.apiUrl = new URL(endpoint, getApiUrl());
+		// this.apiUrl = new URL(endpoint, getApiUrl());
+		this.apiUrl = new URL(endpoint);
 		console.debug('Resource has api url: ', this.apiUrl);
 	}
 

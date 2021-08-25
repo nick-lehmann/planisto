@@ -1,17 +1,17 @@
-import { Course } from './Course.entity';
-import type { Module } from './Module.entity';
 import { Entity, OneToMany, PrimaryColumn } from 'typeorm';
-import { Period } from './Period.entity';
+import { Course } from './Course.entity.js';
+import type { Module } from './Module.entity.js';
+import type { Period } from './Period.entity.js';
 
 @Entity()
 export class University {
-	@PrimaryColumn({ type: 'varchar', length: 255 })
-	name: string;
+	@PrimaryColumn({ type: 'varchar', length: 255, nullable: false })
+	name!: string;
 
-	courses?: Course[];
-	modules?: Module[];
+	courses!: Course[];
+	modules!: Module[];
 
-	@OneToMany((type) => Period, (period) => period.university)
+	@OneToMany('Period', (period: Period) => period.university)
 	periods?: Period;
 
 	// constructor(init: Partial<University>) { Object.assign(this, init) }

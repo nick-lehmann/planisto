@@ -1,5 +1,5 @@
 import { Extent, Module } from '@planisto/university';
-import type { ObjectFixture } from '../helpers';
+import type { ObjectFixture } from '../helpers/index.js';
 
 export const moduleFixtures: ObjectFixture<Module> = {
 	vertiefung: new Module({

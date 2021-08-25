@@ -1,4 +1,4 @@
-import type { Writable, Subscriber, Unsubscriber, Updater } from 'svelte/store';
+import type { Subscriber, Unsubscriber, Updater, Writable } from 'svelte/store';
 import { writable } from 'svelte/store';
 
 export class ClassStore<T> implements Writable<T> {

@@ -1,5 +1,5 @@
 import { Degree } from '@planisto/university';
-import type { ObjectFixture } from '../helpers';
+import type { ObjectFixture } from '../helpers/index.js';
 
 const bachelorComputerScience = new Degree({
 	name: 'Bachelor Informatik',

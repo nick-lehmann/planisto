@@ -1,5 +1,5 @@
 import type { ConnectionOptions } from 'typeorm';
-import { ALL_ENTITIES } from './app.module';
+import { ALL_ENTITIES } from './app.module.js';
 
 const config: ConnectionOptions = {
 	type: 'postgres',
@@ -13,4 +13,4 @@ const config: ConnectionOptions = {
 	entities: ALL_ENTITIES
 };
 
-export default config
+export default config;

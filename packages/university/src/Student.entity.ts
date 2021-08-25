@@ -1,17 +1,17 @@
-import {BaseEntity, Column, Entity, OneToMany, PrimaryColumn} from "typeorm";
+import { Column, Entity, PrimaryColumn } from 'typeorm';
 // import {Enrollment} from "./Enrollment.entity";
 
 @Entity()
 export class Student {
-    @PrimaryColumn({ type: 'varchar', length: 255, nullable: false})
-    email: string
+	@PrimaryColumn({ type: 'varchar', length: 255, nullable: false })
+	email!: string;
 
-    @Column({ type: 'varchar', length: 100 })
-    firstName: string
+	@Column({ type: 'varchar', length: 100, nullable: false })
+	firstName!: string;
 
-    @Column({ type: 'varchar', length: 100 })
-    lastName: string
+	@Column({ type: 'varchar', length: 100, nullable: false })
+	lastName!: string;
 
-    // @OneToMany(type => Enrollment, enrollment => enrollment.student)
-    // enrollments: Enrollment[]
+	// @OneToMany(type => Enrollment, enrollment => enrollment.student)
+	// enrollments: Enrollment[]
 }
