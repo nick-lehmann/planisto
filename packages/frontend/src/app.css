@@ -7,3 +7,9 @@
 	--color-lightgrey: #eee;
 	--color-darkgrey: #333;
 }
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}

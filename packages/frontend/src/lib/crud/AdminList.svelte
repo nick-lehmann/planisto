@@ -90,7 +90,7 @@
 			<button on:click={() => (selection = {})}>Reset Selection</button>
 		{/if}
 
-		<p>Showing {Object.keys(displayedItems).length} items of {totalItems}</p>
+		<p>Showing {Object.keys(displayedItems).length}/{totalItems}</p>
 		<Pagination bind:total={totalPages} bind:current={currentPage} />
 	</aside>
 </div>

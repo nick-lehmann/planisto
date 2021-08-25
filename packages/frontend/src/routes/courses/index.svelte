@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-	console.log('hello world');
-</script>
-
 <script lang="ts">
 	import { AdminList, courses } from '../../lib';
 	import type { Course } from '@planisto/university';
@@ -13,10 +9,6 @@
 		console.log('Mounted');
 		loading = courses.load();
 	});
-
-	// let propertyFormatters = {
-	// 	'extent': (value: Extent) => `${value.lecture}/${value.exercise}/${value.practical}`
-	// }
 
 	const itemLink = (course: Course) => `/courses/${course.name}`;
 </script>
