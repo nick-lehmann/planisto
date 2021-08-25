@@ -6,7 +6,7 @@
 	import FilterMenu from './components/FilterMenu.svelte';
 	import type { Formatters, ItemLink } from './display';
 	import type { Filters } from './filter';
-	import { FilterType, findUniqueValues } from './filter';
+	import { findUniqueValues } from './filter';
 	import { paginate } from './paginate';
 	import { process } from './process';
 	import { getInitialSorting } from './sorting';
@@ -17,14 +17,12 @@
 
 	export let formatters: Formatters = null;
 	export let sorting = getInitialSorting(properties, resource);
-	export let filters: Filters = {
-		name: { type: FilterType.Search },
-		teachers: { type: FilterType.Select }
-	};
+	export let filters: Filters = {};
 
 	export let currentPage = 0;
 	export let pageSize = 12;
 	export let itemLink: ItemLink;
+	export let newUrl: string;
 	export let selectable = true;
 
 	let allItems: Items;
@@ -78,12 +76,14 @@
 
 	<aside class="sidebar">
 		<h3>Actions</h3>
-		<a class="btn" href="/courses/new">
+		<a class="btn" href={newUrl}>
 			<i class="fas fa-plus-square" />
 		</a>
 
-		<h3>Filters</h3>
-		<FilterMenu bind:filters bind:uniqueValues />
+		{#if Object.keys(filters).length > 0}
+			<h3>Filters</h3>
+			<FilterMenu bind:filters bind:uniqueValues />
+		{/if}
 
 		{#if selectCount > 0}
 			<p>Selected {selectCount} items</p>
@@ -110,7 +110,7 @@
 
 	.btn {
 		background-color: var(--color-primary);
-		color: lightblue;
+		color: white;
 		padding: 5px 15px;
 		width: 100%;
 		display: block;

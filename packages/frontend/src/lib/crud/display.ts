@@ -1,8 +1,8 @@
 import type { Property } from './utils';
 
-export type ItemLink = (key: unknown) => string
-export type Formatter = (value: unknown) => string
-export type Formatters = Record<string, Formatter> | null
+export type ItemLink = (key: unknown) => string;
+export type Formatter = (value: unknown) => string;
+export type Formatters = Record<string, Formatter> | null;
 
 export function display(item: unknown, property: Property, formatters: Formatters): string {
 	const value = item[property];
@@ -10,13 +10,14 @@ export function display(item: unknown, property: Property, formatters: Formatter
 		case 'string':
 			return value;
 		case 'object':
-			return formatters && property in formatters
-				? formatters[property](value)
-				: value.toString();
+			return formatters && property in formatters ? formatters[property](value) : value.toString();
+		case 'boolean':
+			return value ? 'ja' : 'nein';
 		default: {
-			console.error(item)
-			throw Error(`Cannot get display representation for property ${property} of type ${typeof value} for item: ${item}`);
+			console.error(item);
+			throw Error(
+				`Cannot get display representation for property ${property} of type ${typeof value} for item: ${item}`
+			);
 		}
-
 	}
 }

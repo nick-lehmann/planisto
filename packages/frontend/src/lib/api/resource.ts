@@ -4,9 +4,6 @@ import { plainToClass } from 'class-transformer';
 import * as urljoin from 'url-join';
 import { ClassStore } from './class.store';
 
-export type IdentifierFunction<T> = (entity: T) => string;
-export type Identifier<T> = string | IdentifierFunction<T>;
-
 export class ApiResource<T> extends ClassStore<Record<string, T> | null> {
 	baseHttpOptions: Partial<RequestInit> = {
 		headers: {
