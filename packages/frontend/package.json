@@ -11,6 +11,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.4",
 		"eslint": "^7.23.0",
 		"eslint-plugin-import": "^2.22.1",
 		"prettier": "^2.2.1",

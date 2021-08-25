@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { LinkWrapper, Pagination } from '../components';
 	import type { ApiResource } from '../api/resource';
-	import { getInitialSorting } from './sorting';
+	import { Pagination } from '../components';
+	import AdminListEntry from './AdminListEntry.svelte';
+	import AdminListHeader from './AdminListHeader.svelte';
+	import FilterMenu from './components/FilterMenu.svelte';
 	import type { Formatters, ItemLink } from './display';
-	import { display } from './display';
 	import type { Filters } from './filter';
 	import { FilterType, findUniqueValues } from './filter';
 	import { paginate } from './paginate';
-	import type { Items } from './utils';
-	import SortingIcon from './components/SortingIcon.svelte';
-	import FilterMenu from './components/FilterMenu.svelte';
 	import { process } from './process';
+	import { getInitialSorting } from './sorting';
+	import type { Items, ListSelection } from './utils';
 
 	export let properties: string[] = [];
 	export let resource: ApiResource<unknown>;
@@ -23,7 +23,7 @@
 	};
 
 	export let currentPage = 0;
-	export let pageSize = 10;
+	export let pageSize = 12;
 	export let itemLink: ItemLink;
 	export let selectable = true;
 
@@ -34,9 +34,9 @@
 	$: items = process({ items: allItems, sorting, filters });
 	$: displayedItems = paginate(items, pageSize, currentPage);
 
-	let selected = {};
+	let selection: ListSelection = {};
 	let selectCount: number;
-	$: selectCount = Object.values(selected).filter((x) => x).length;
+	$: selectCount = Object.values(selection).filter((x) => x).length;
 
 	let totalItems: number, totalPages: number;
 	$: totalItems = Object.keys(allItems).length;
@@ -52,67 +52,70 @@
 		uniqueValues,
 		totalItems,
 		totalPages,
-		selected
+		selection
 	});
 </script>
 
 <div class="admin-list">
 	<main>
 		<table>
-			<thead>
-				<tr>
-					{#if selectable}
-						<td />
-					{/if}
-					{#each properties as property}
-						<td>
-							{property}
-							<SortingIcon bind:sortOrder={sorting[property]} />
-						</td>
-					{/each}
-				</tr>
-			</thead>
+			<AdminListHeader {selectable} {properties} {sorting} />
 			<tbody>
-				{#each Object.entries(displayedItems) as [identifier, item]}
-					<tr>
-						{#if selectable}
-							<td>
-								<input type="checkbox" bind:checked={selected[identifier]} />
-							</td>
-						{/if}
-						{#each properties as property, index}
-							<td>
-								<LinkWrapper wrap={index === 0} link={encodeURI(itemLink(item))}>
-									<p>{display(item, property, formatters)}</p>
-								</LinkWrapper>
-							</td>
-						{/each}
-					</tr>
+				{#each Object.entries(displayedItems) as [identifier, item] (identifier)}
+					<AdminListEntry
+						{item}
+						{itemLink}
+						{identifier}
+						{properties}
+						{formatters}
+						bind:selection
+						{selectable}
+					/>
 				{/each}
 			</tbody>
 		</table>
 	</main>
 
 	<aside class="sidebar">
-		<a href="/courses/new">Add new</a>
+		<h3>Actions</h3>
+		<a class="btn" href="/courses/new">
+			<i class="fas fa-plus-square" />
+		</a>
 
 		<h3>Filters</h3>
 		<FilterMenu bind:filters bind:uniqueValues />
-		<p>Selected {selectCount} items</p>
-		<button on:click={() => (selected = {})}>Reset Selection</button>
+
+		{#if selectCount > 0}
+			<p>Selected {selectCount} items</p>
+			<button on:click={() => (selection = {})}>Reset Selection</button>
+		{/if}
+
+		<p>Showing {Object.keys(displayedItems).length} items of {totalItems}</p>
+		<Pagination bind:total={totalPages} bind:current={currentPage} />
 	</aside>
 </div>
-
-<p>Showing {Object.keys(items).length} items of {totalItems}</p>
-<Pagination bind:total={totalPages} bind:current={currentPage} />
 
 <style>
 	.admin-list {
 		display: grid;
 		grid-template-columns: 85% 15%;
+		grid-gap: 50px;
 	}
-	td {
-		margin-bottom: 5px;
-		padding: 0 5px;
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+	}
+
+	.btn {
+		background-color: var(--color-primary);
+		color: lightblue;
+		padding: 5px 15px;
+		width: 100%;
+		display: block;
+		border-radius: 10px;
+		text-align: center;
+		font-size: 20px;
 	}
 </style>

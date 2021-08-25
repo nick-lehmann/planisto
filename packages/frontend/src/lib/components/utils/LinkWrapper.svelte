@@ -1,12 +1,20 @@
-<script lang='ts'>
-	export let wrap: boolean
-	export let link: string
+<script lang="ts">
+	export let wrap: boolean;
+	export let link: string;
+	export let unstyle: boolean = false;
 </script>
 
 {#if wrap}
-	<a href='{link}'>
-		<slot/>
+	<a href={link} class:unstyle>
+		<slot />
 	</a>
 {:else}
-	<slot/>
+	<slot />
 {/if}
+
+<style>
+	.unstyle {
+		color: inherit;
+		text-decoration: inherit;
+	}
+</style>

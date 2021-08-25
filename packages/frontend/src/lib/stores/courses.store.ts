@@ -1,6 +1,7 @@
 import { Course } from '@planisto/university';
 import { ApiResource } from '../api/resource';
-// import { api } from '../api';
+
+export const courses = new ApiResource<Course>('http://localhost:8000/courses', Course, 'name');
 
 // function createDictApiStore<T>(resource: ApiResource<T>, primaryKey: string) {
 // 	const { subscribe, set, update } = writable([])
@@ -67,4 +68,3 @@ import { ApiResource } from '../api/resource';
 // ])
 
 // export const courses = createDictApiStore<Course>(api.courses, "name")
-export const courses = new ApiResource<Course>('http://localhost:8000/courses', Course, 'name');
