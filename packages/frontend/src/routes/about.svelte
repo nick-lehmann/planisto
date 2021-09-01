@@ -1,14 +1,10 @@
-<script context="module" lang="ts">
-	console.log("hello from context")
-</script>
-
 <script lang="ts">
-	import { Course } from '@planisto/university'
-	console.log("hello from page")
-
-	const loading = new Promise((resolve, reject) => {
-		console.log("hello from promise")
-	})
+	import { api } from '../lib';
+	const { courses } = api;
 </script>
 
-<h1>Test</h1>
+<ul>
+	{#each Object.values($courses) as course}
+		<li>{course.name}</li>
+	{/each}
+</ul>

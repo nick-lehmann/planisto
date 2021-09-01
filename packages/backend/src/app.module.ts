@@ -8,6 +8,8 @@ import {
 	Module,
 	Offer,
 	Period,
+	Roadmap,
+	RoadmapItem,
 	Student,
 	University
 } from '@planisto/university';
@@ -28,6 +30,7 @@ import {
 } from './modules/index.js';
 import { offersFixtures, OffersModule, OffersService } from './offers/index.js';
 import { periodFixture, PeriodModule } from './period/index.js';
+import { roadmapsFixtures, RoadmapsModule } from './roadmaps/index.js';
 import { SemesterModule } from './semester/index.js';
 import { universityFixture } from './university/index.js';
 
@@ -39,9 +42,13 @@ export const ALL_ENTITIES = [
 	Module,
 	Offer,
 	Period,
+	Roadmap,
+	RoadmapItem,
 	Student,
 	University
 ];
+
+console.debug({ ALL_ENTITIES });
 
 @NestModule({
 	imports: [
@@ -54,14 +61,16 @@ export const ALL_ENTITIES = [
 			database: 'planisto',
 			synchronize: true,
 			entities: ALL_ENTITIES,
-			logging: 'all'
+			// logging: 'all'
+			logging: false
 		}),
 		CoursesModule,
 		ModulesModule,
 		OffersModule,
 		SemesterModule,
 		DegreesModule,
-		PeriodModule
+		PeriodModule,
+		RoadmapsModule
 	],
 	controllers: [CoursesController, ModulesController],
 	providers: [ModulesService, CoursesService, OffersService]
@@ -94,11 +103,13 @@ export class AppModule {
 			{
 				entity: Offer,
 				fixture: offersFixtures
+			},
+			{
+				entity: Roadmap,
+				fixture: roadmapsFixtures
 			}
 		];
 
 		await loadFixtures(fixtures, this.connection);
-
-		console.debug(`IDs of offers: ${offersFixtures.map((offer) => offer.id)}`);
 	}
 }

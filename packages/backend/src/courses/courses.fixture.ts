@@ -18,16 +18,14 @@ export const coursesFixtures: ObjectFixture<Course> = {
 		extent: new Extent({ lecture: 2, exercise: 0, practical: 0 }),
 		teachers: ['Prof. Castrillon-Mazo'],
 		institute: '',
-		exam: 'P(s)',
-		master: true
+		exam: 'P(s)'
 	}),
 	DIA: new Course({
 		name: 'Datenintegration und -analyse ',
 		extent: new Extent({ lecture: 2, exercise: 2, practical: 0 }),
 		teachers: ['Prof. Lehner', 'Dr. Hartmann'],
 		institute: '',
-		exam: 'P(m)',
-		master: true
+		exam: 'P(m)'
 	}),
 	...dummyCourses
 };

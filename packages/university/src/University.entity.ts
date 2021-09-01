@@ -1,5 +1,5 @@
 import { Entity, OneToMany, PrimaryColumn } from 'typeorm';
-import { Course } from './Course.entity.js';
+import type { Course } from './Course.entity.js';
 import type { Module } from './Module.entity.js';
 import type { Period } from './Period.entity.js';
 
@@ -56,15 +56,15 @@ export class University {
  * @param {Array} courses
  */
 function uniqueModules(courses: Course[]): Module[] {
-	const modules = {};
-
-	for (const rawCourse of courses) {
-		const course = new Course(rawCourse);
-		for (const rawModule of course.possibleModules) {
-			// if (!(rawModule.name in modules))
-			//     modules[rawModule.name] = new Module(rawModule)
-			// modules[rawModule.name].courses.push()
-		}
-	}
-	return Object.values(modules);
+	// const modules = {};
+	// for (const rawCourse of courses) {
+	// 	const course = new Course(rawCourse);
+	// 	for (const rawModule of course.possibleModules) {
+	// 		// if (!(rawModule.name in modules))
+	// 		//     modules[rawModule.name] = new Module(rawModule)
+	// 		// modules[rawModule.name].courses.push()
+	// 	}
+	// }
+	// return Object.values(modules);
+	return [];
 }

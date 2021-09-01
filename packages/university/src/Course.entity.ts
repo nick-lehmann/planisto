@@ -26,14 +26,12 @@ export const stringListTransformer = {
  */
 @Entity()
 export class Course {
-	@Expose()
 	@PrimaryColumn({ type: 'varchar', length: 255 })
 	name: string;
 
 	@Type(() => Extent)
 	@Column({ type: 'varchar', length: 10, transformer: extentTransformer })
 	extent: Extent;
-
 	@Expose()
 	@Column({ type: 'varchar', length: 255, transformer: stringListTransformer })
 	teachers: string[];
@@ -44,9 +42,6 @@ export class Course {
 	@Column({ type: 'varchar', length: 255 })
 	exam: string;
 
-	// TODO: Not needed anymore
-	@Column({ type: 'boolean' })
-	master: boolean = false;
 	possibleModules: Module[];
 	languages: string[];
 
@@ -55,7 +50,8 @@ export class Course {
 
 	// Student can indicate if he/she likes this course
 	// Information can be used for basic bookmarks but also for automatic planning
-	favorite: boolean = false;
+	// @ManyToMany('Student', (student: Student) => student.favoriteCourses)
+	// favorites: boolean = false;
 
 	constructor(init: Partial<Course>) {
 		Object.assign(this, init);

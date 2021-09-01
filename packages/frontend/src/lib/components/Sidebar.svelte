@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { loading } from '../stores';
 </script>
 
 <nav>
@@ -8,7 +9,7 @@
 
 	<ul>
 		<li>
-			<a href="/plans">Plans</a>
+			<a href="/roadmaps">Roadmaps</a>
 		</li>
 		<li>
 			<a href="/catalog/courses">Catalog</a>
@@ -16,6 +17,10 @@
 		<li>
 			<a href="/settings">Settings</a>
 		</li>
+
+		{#if $loading}
+			<p>Loading</p>
+		{/if}
 	</ul>
 </nav>
 

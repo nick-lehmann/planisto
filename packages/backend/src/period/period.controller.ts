@@ -1,7 +1,8 @@
 import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Crud } from '@nestjsx/crud';
 import { Period } from '@planisto/university';
-import { ApiTags } from '@nestjs/swagger';
+import { PeriodService } from './period.service.js';
 
 @Crud({
 	model: { type: Period }
@@ -9,4 +10,5 @@ import { ApiTags } from '@nestjs/swagger';
 @ApiTags('Periods')
 @Controller('periods')
 export class PeriodController {
+	constructor(private service: PeriodService) {}
 }

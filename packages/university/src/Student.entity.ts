@@ -12,6 +12,9 @@ export class Student {
 	@Column({ type: 'varchar', length: 100, nullable: false })
 	lastName!: string;
 
+	// @ManyToMany('Course', (course: Course) => course.favorites)
+	// favoriteCourses: Course[];
+
 	// @OneToMany(type => Enrollment, enrollment => enrollment.student)
 	// enrollments: Enrollment[]
 }

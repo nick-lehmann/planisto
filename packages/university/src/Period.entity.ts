@@ -8,7 +8,7 @@ import {
 	PrimaryGeneratedColumn
 } from 'typeorm';
 import { Offer } from './Offer.entity.js';
-import { University } from './University.js';
+import { University } from './University.entity.js';
 
 export enum Season {
 	WINTER = 'winter',
@@ -32,11 +32,13 @@ export function parseSemesterString(raw: string) {
 	// return new Period({year, season})
 }
 
+export type PeriodID = number;
+
 @Entity()
 @Index(['name', 'university'], { unique: true })
 export class Period {
 	@PrimaryGeneratedColumn()
-	id: number;
+	id: PeriodID;
 
 	@Column({ type: 'varchar', length: 255, nullable: false })
 	name: string;

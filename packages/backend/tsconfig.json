@@ -7,7 +7,10 @@
 		"outDir": "./dist",
 		"baseUrl": "./",
 		"incremental": true,
-		"esModuleInterop": false
+		"esModuleInterop": false,
+		"paths": {
+			"@planisto/university": ["../packages/university/src/index.ts"]
+		}
 	},
 	"include": ["src/*", "migration/*"],
 	"exclude": ["node_modules", "dist"]

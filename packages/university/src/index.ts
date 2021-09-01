@@ -8,5 +8,6 @@ export * from './Faculty.entity.js';
 export * from './Module.entity.js';
 export * from './Offer.entity.js';
 export * from './Period.entity.js';
+export * from './Roadmap.entity.js';
 export * from './Student.entity.js';
-export * from './University.js';
+export * from './University.entity.js';

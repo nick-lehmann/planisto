@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ApiResource } from '../api/resource';
+	import type { ApiResource } from '../stores';
 	import { Pagination } from '../components';
 	import AdminListEntry from './AdminListEntry.svelte';
 	import AdminListHeader from './AdminListHeader.svelte';
@@ -11,6 +11,7 @@
 	import { process } from './process';
 	import { getInitialSorting } from './sorting';
 	import type { Items, ListSelection } from './utils';
+	import { onDestroy } from 'svelte';
 
 	export let properties: string[] = [];
 	export let resource: ApiResource<unknown>;
@@ -26,7 +27,10 @@
 	export let selectable = true;
 
 	let allItems: Items;
-	$: allItems = $resource;
+	const unsubscribe = resource.subscribe((value) => {
+		allItems = value;
+	});
+	onDestroy(unsubscribe);
 
 	let items: Items;
 	$: items = process({ items: allItems, sorting, filters });
