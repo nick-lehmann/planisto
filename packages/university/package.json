@@ -7,6 +7,7 @@
   "private": "true",
   "type": "module",
   "scripts": {
+    "prebuild": "rm -rf dist",
     "scrape": "nodemon --watch 'src/**/*.ts' --exec ts-node src/scraper/Scraper.ts",
     "build": "tsc",
     "dev": "tsc --watch"

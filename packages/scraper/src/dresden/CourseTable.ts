@@ -1,5 +1,4 @@
-import { Course } from '../Course.entity';
-import { Extent } from '../Extent';
+import { Course, Extent } from '@planisto/university';
 
 export class CourseTable {
 	/**

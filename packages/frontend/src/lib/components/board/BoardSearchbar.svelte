@@ -14,7 +14,7 @@
 		name: course.name
 	}));
 
-	$: console.debug({ items });
+	// $: console.debug({ items });
 
 	let displayedItems = items;
 

@@ -28,12 +28,12 @@
 			"type": "shell",
 			"command": "",
 			// Set the shell type
-			"options": {
-				"shell": {
-					"executable": "cmd.exe",
-					"args": []
-				}
-			},
+			// "options": {
+				// "shell": {
+					// "executable": "cmd.exe",
+					// "args": []
+				// }
+			// },
 			// Mark as a background task to avoid the spinner animation on the terminal tab
 			"isBackground": true,
 			"problemMatcher": [],

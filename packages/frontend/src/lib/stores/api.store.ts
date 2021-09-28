@@ -9,19 +9,8 @@ import type { Identifier } from '../crud';
 
 export type Dictionary<T> = Record<string, T> | null;
 
-function sleep(ms: number) {
-	return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 const ongoingRequests = writable(0);
-export const loading = derived(ongoingRequests, ($ongoingRequests) => {
-	if ($ongoingRequests > 0) {
-		console.debug(`Loading... ${$ongoingRequests} ongoing requests`);
-	} else {
-		console.debug(`Done loading`);
-	}
-	return $ongoingRequests > 0;
-});
+export const loading = derived(ongoingRequests, ($ongoingRequests) => $ongoingRequests > 0);
 
 export class ApiResource<T> {
 	private readonly store: Writable<Dictionary<T>>;
@@ -50,7 +39,6 @@ export class ApiResource<T> {
 		body: Record<string, unknown>
 	): Promise<X> {
 		const url = urljoin(this.apiUrl.toString(), path);
-		console.debug(`Requesting ${url}`);
 		ongoingRequests.update((n) => n + 1);
 		const response = await fetch(url, {
 			...this.baseHttpOptions,
@@ -66,13 +54,17 @@ export class ApiResource<T> {
 		else return this.identifier(item);
 	}
 
+	async get(identifier: string): Promise<T> {
+		const response = await this.request<T>('GET', identifier, {});
+		return plainToClass(this.entity as any, response);
+	}
+
 	async getAll(): Promise<T[]> {
 		const response = await this.request<T[]>('GET', '', {});
 		return response.map((item) => plainToClass(this.entity as any, item)) as unknown as T[];
 	}
 
 	async load(): Promise<void> {
-		console.debug(`Loading from ${this.apiUrl.toString()}`);
 		const items = await this.getAll();
 		this.set(Object.fromEntries(items.map((item) => [this.getIdentifier(item), item])));
 	}
@@ -122,9 +114,7 @@ export class ApiResource<T> {
 	update = (fn: Updater<Dictionary<T>>): void => this.store.update(fn);
 
 	subscribe(run: Subscriber<Dictionary<T>>): Unsubscriber {
-		console.debug(`Subscribing to store for ${this.apiUrl}`);
 		if (!this.initialised) {
-			console.debug(`Store for ${this.apiUrl} now initialising`);
 			this.set({});
 			this.load();
 		}

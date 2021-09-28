@@ -1,52 +1,32 @@
 import { Module as NestModule } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {
-	Course,
-	Degree,
-	Department,
-	Faculty,
-	Module,
-	Offer,
-	Period,
-	Roadmap,
-	RoadmapItem,
-	Student,
-	University
+  ALL_ENTITIES, Course,
+  Degree, Module,
+  Offer,
+  Period,
+  Roadmap, University
 } from '@planisto/university';
 import { Connection } from 'typeorm';
 import {
-	CoursesController,
-	coursesFixtures,
-	CoursesModule,
-	CoursesService
+  CoursesController,
+  coursesFixtures,
+  CoursesModule,
+  CoursesService
 } from './courses/index.js';
 import { DegreeModule as DegreesModule, degreesFixtures } from './degrees/index.js';
 import { loadFixtures, TypeormFixture } from './helpers/index.js';
 import {
-	moduleFixtures,
-	ModulesController,
-	ModulesModule,
-	ModulesService
+  moduleFixtures,
+  ModulesController,
+  ModulesModule,
+  ModulesService
 } from './modules/index.js';
 import { offersFixtures, OffersModule, OffersService } from './offers/index.js';
 import { periodFixture, PeriodModule } from './period/index.js';
 import { roadmapsFixtures, RoadmapsModule } from './roadmaps/index.js';
 import { SemesterModule } from './semester/index.js';
 import { universityFixture } from './university/index.js';
-
-export const ALL_ENTITIES = [
-	Course,
-	Degree,
-	Department,
-	Faculty,
-	Module,
-	Offer,
-	Period,
-	Roadmap,
-	RoadmapItem,
-	Student,
-	University
-];
 
 console.debug({ ALL_ENTITIES });
 

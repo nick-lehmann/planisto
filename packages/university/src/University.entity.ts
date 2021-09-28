@@ -1,11 +1,17 @@
-import { Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import type { Course } from './Course.entity.js';
+import type { Degree } from './Degree.entity.js';
 import type { Module } from './Module.entity.js';
 import type { Period } from './Period.entity.js';
 
+export type UniversityID = number
+
 @Entity()
 export class University {
-	@PrimaryColumn({ type: 'varchar', length: 255, nullable: false })
+  @PrimaryGeneratedColumn() 
+  id!: UniversityID
+  
+	@Column({ type: 'varchar', length: 255, nullable: false })
 	name!: string;
 
 	courses!: Course[];
@@ -13,58 +19,11 @@ export class University {
 
 	@OneToMany('Period', (period: Period) => period.university)
 	periods?: Period;
-
-	// constructor(init: Partial<University>) { Object.assign(this, init) }
-
-	// constructor(courses: Course[]) {
-	// this.courses = courses
-	// this.modules = uniqueModules(courses)
-	// }
-
-	/**
-	 * Moves a course to a new module if the move is valid.
-	 *
-	 * @param course
-	 * @param to
-	 */
-	moveCourse(course: Course, to: Module) {
-		if (!to.acceptsCourse(course)) return;
-		const oldModule = this.moduleByCourse(course);
-		if (oldModule != null) oldModule.removeCourse(course);
-		to.addCourse(course);
-	}
-
-	/**
-	 * Return the module that currently contains the given course.
-	 *
-	 * @param course
-	 */
-	moduleByCourse(course: Course): Module | null {
-		for (const module of this.modules) if (module.courses.indexOf(course) >= 0) return module;
-		return null;
-	}
+  
+  @OneToMany('Degree', (degree: Degree) => degree.university)
+  degress: Degree
 
 	constructor(init: Partial<University>) {
 		Object.assign(this, init);
 	}
-}
-
-/**
- * Returns a set of unique module names from the
- * given list of courses.
- *
- * @param {Array} courses
- */
-function uniqueModules(courses: Course[]): Module[] {
-	// const modules = {};
-	// for (const rawCourse of courses) {
-	// 	const course = new Course(rawCourse);
-	// 	for (const rawModule of course.possibleModules) {
-	// 		// if (!(rawModule.name in modules))
-	// 		//     modules[rawModule.name] = new Module(rawModule)
-	// 		// modules[rawModule.name].courses.push()
-	// 	}
-	// }
-	// return Object.values(modules);
-	return [];
 }
