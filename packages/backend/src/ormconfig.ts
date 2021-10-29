@@ -1,5 +1,5 @@
+import { ALL_ENTITIES } from '@planisto/university';
 import type { ConnectionOptions } from 'typeorm';
-import { ALL_ENTITIES } from './app.module.js';
 
 const config: ConnectionOptions = {
 	type: 'postgres',

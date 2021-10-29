@@ -28,7 +28,7 @@
 		"@nestjs/typeorm": "^7.1.4",
 		"@nestjsx/crud": "^4.6.2",
 		"@nestjsx/crud-typeorm": "^4.6.2",
-		"@planisto/university": "^0.0.0",
+		"@planisto/university": "workspace:*",
 		"class-transformer": "^0.3.1",
 		"class-validator": "^0.12.2",
 		"pg": "^8.4.2",

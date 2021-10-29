@@ -1,28 +1,26 @@
 {
-  "name": "planisto",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build": "lerna run build --stream",
-    "dev": "lerna run dev --stream --parallel",
-    "clean": "yarn run clean:dist && yarn run clean:packages",
-    "clean:dist": "lerna exec -- rm -rf dist",
-    "clean:packages": "lerna exec -- rm -rf node_modules && rm -rf node_modules",
-    "test": "echo 'Not yet implemented'"
-  },
-  "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-svelte3": "^3.1.2",
-    "lerna": "^3.22.1",
-    "prettier": "^2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "rollup-plugin-node-builtins": "^2.1.2"
-  },
-  "private": true,
-  "license": "UNLICENSED",
-  "workspaces": [
-    "packages/*"
-  ]
+	"name": "planisto",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "pnpm m run build",
+		"dev": "pnpm m run dev --no-sort",
+		"clean": "pnpm run clean:dist && pnpm run clean:packages",
+		"clean:dist": "pnpm m exec rm -rf dist",
+		"clean:packages": "pnpm m exec rm -rf node_modules && rm -rf node_modules"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"rollup-plugin-node-builtins": "^2.1.2"
+	},
+	"private": true,
+	"license": "UNLICENSED",
+	"workspaces": [
+		"packages/*"
+	]
 }

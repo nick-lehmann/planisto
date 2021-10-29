@@ -13,7 +13,8 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					typeorm: '/Users/nick/Projekte/Planisto/node_modules/typeorm/typeorm-model-shim.js'
+					typeorm:
+						'/Users/nick/Projekte/planisto/packages/backend/node_modules/typeorm/typeorm-model-shim.js'
 				}
 			}
 		}

@@ -3,6 +3,8 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import 'reflect-metadata';
 import { AppModule } from './app.module.js';
 
+const PORT = 8000;
+
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
 	const options = new DocumentBuilder()
@@ -18,7 +20,8 @@ async function bootstrap() {
 		credentials: true
 	});
 
-	await app.listen(8000);
+	console.log(`Starting backend on port ${PORT}`);
+	await app.listen(PORT);
 }
 
 bootstrap();
